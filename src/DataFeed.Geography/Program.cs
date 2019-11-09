@@ -35,6 +35,7 @@ namespace DataFeed.Geography
                     services.AddSingleton<IGeographyMongoRepository>(new GeographyMongoRepository(mongoConnString, "DataFeed"));
                     //service
                     services.AddSingleton<IGeographyService, GeographyService>();
+                    //hostedservice
                     services.AddHostedService<GeographyHostedService>();
                 }).ConfigureLogging((logging, builder) =>
                 {

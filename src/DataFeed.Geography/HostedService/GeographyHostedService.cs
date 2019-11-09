@@ -1,6 +1,5 @@
 
 using DataFeed.Geography.Crawlers;
-using DataFeed.Geography.Quartz.Job;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Quartz;

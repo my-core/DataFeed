@@ -4,14 +4,15 @@ using FastNet.Framework.NetCrawler;
 using NLog;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace DataFeed.Geography.Crawlers
 {
     public class GeographyCrawler : Crawler
     {
         private readonly Logger _logger = LogManager.GetCurrentClassLogger();
-        private GeographyService _geographyService;
-        public GeographyCrawler(CrawlOptions crawlOptions, GeographyService geographyService) : base(crawlOptions)
+        private IGeographyService _geographyService;
+        public GeographyCrawler(CrawlOptions crawlOptions, IGeographyService geographyService) : base(crawlOptions)
         {
             _geographyService = geographyService;
         }
@@ -42,12 +43,12 @@ namespace DataFeed.Geography.Crawlers
                     metadata.Add("provinceName", provinceName);
                     url = e.Url.Substring(0, e.Url.LastIndexOf("/") + 1) + url;
                     _logger.Info($"ParserProvince->url[{url}]");
-                    Request(url, ParserProvince, metadata, 1);
+                    Request(url, ParserCity, metadata, 1);
                 };
             }
             catch(Exception ex)
             {
-                _logger.Error(ex, $"ParserCity->{e.Url}");
+                _logger.Error(ex, $"ParserProvince->{e.Url}");
             }
         }
         /// <summary>

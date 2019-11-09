@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DataFeed.Geography.Model.Mongo
 {
-    public class GeographyModel
+    public class GeographyModel: BaseModel
     {
         public string ProvinceCode { get; set; }
         public string ProvinceName { get; set; }
