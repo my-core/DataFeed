@@ -21,5 +21,7 @@ namespace DataFeed.Geography.Model.Mongo
         public string VillageCode { get; set; }
         public string VillageName { get; set; }
 
+        public DateTime CreateTime { get; set; } = DateTime.Now;
+
     }
 }

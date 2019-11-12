@@ -20,7 +20,7 @@ namespace DataFeed.Geography.Crawlers
         public void StartRequest()
         {
             string url = "http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2018/index.html";
-            _logger.Info($"Request->url{url}");
+            _logger.Info($"StartRequest->url{url}");
             Request(url, ParserProvince);
         }
         /// <summary>
@@ -31,8 +31,15 @@ namespace DataFeed.Geography.Crawlers
         {
             try
             {
+                _logger.Info($"ParserProvince->url[{e.Url}]");
                 var htmlDoc = e.HtmlDocument;
                 var nodes = htmlDoc.DocumentNode.SelectNodes("//tr[@class='provincetr']/td/a");
+                if (nodes == null)
+                {
+                    _logger.Warn($"ParserProvince->can't find nodes for {e.Url}");
+                    _logger.Warn($"HtmlDocument->{e.HtmlDocument.Text}");
+                    return;
+                }
                 foreach (var node in nodes)
                 {
                     string url = node.Attributes["href"].Value;
@@ -42,7 +49,6 @@ namespace DataFeed.Geography.Crawlers
                     metadata.Add("provinceCode", provinceCode);
                     metadata.Add("provinceName", provinceName);
                     url = e.Url.Substring(0, e.Url.LastIndexOf("/") + 1) + url;
-                    _logger.Info($"ParserProvince->url[{url}]");
                     Request(url, ParserCity, metadata, 1);
                 };
             }
@@ -59,8 +65,15 @@ namespace DataFeed.Geography.Crawlers
         {
             try
             {
+                _logger.Info($"ParserCity->url[{e.Url}]");
                 var htmlDoc = e.HtmlDocument;
                 var nodes = htmlDoc.DocumentNode.SelectNodes("//tr[@class='citytr']/td[2]/a");
+                if (nodes == null)
+                {
+                    _logger.Warn($"ParserCity->can't find nodes for {e.Url}");
+                    _logger.Warn($"HtmlDocument->{e.HtmlDocument.Text}");
+                    return;
+                }
                 foreach (var node in nodes)
                 {
                     string url = node.Attributes["href"].Value;
@@ -72,7 +85,6 @@ namespace DataFeed.Geography.Crawlers
                     metadata.Add("cityCode", cityCode);
                     metadata.Add("cityName", cityName);
                     url = e.Url.Substring(0, e.Url.LastIndexOf("/") + 1) + url;
-                    _logger.Info($"ParserCity->url[{url}]");
                     //特殊处理
                     if (cityName == "东莞市" || cityName == "中山市")
                     {
@@ -101,6 +113,12 @@ namespace DataFeed.Geography.Crawlers
             {
                 var htmlDoc = e.HtmlDocument;
                 var nodes = htmlDoc.DocumentNode.SelectNodes("//tr[@class='countytr']/td[2]/a");
+                if (nodes == null)
+                {
+                    _logger.Warn($"ParserCounty->can't find nodes for {e.Url}");
+                    _logger.Warn($"HtmlDocument->{e.HtmlDocument.Text}");
+                    return;
+                }
                 foreach (var node in nodes)
                 {
                     string url = node.Attributes["href"].Value;
@@ -114,7 +132,6 @@ namespace DataFeed.Geography.Crawlers
                     metadata.Add("countyCode", countyCode);
                     metadata.Add("countyName", countyName);
                     url = e.Url.Substring(0, e.Url.LastIndexOf("/") + 1) + url;
-                    _logger.Info($"ParserCounty->url[{url}]");
                     Request(url, ParserTown, metadata, 3);
                 };
             }
@@ -131,8 +148,15 @@ namespace DataFeed.Geography.Crawlers
         {
             try
             {
+                _logger.Info($"ParserTown->url[{e.Url}]");
                 var htmlDoc = e.HtmlDocument;
                 var nodes = htmlDoc.DocumentNode.SelectNodes("//tr[@class='towntr']/td[2]/a");
+                if (nodes == null)
+                {
+                    _logger.Warn($"ParserTown->can't find nodes for {e.Url}");
+                    _logger.Warn($"HtmlDocument->{e.HtmlDocument.Text}");
+                    return;
+                }
                 foreach (var node in nodes)
                 {
                     string url = node.Attributes["href"].Value;
@@ -148,7 +172,6 @@ namespace DataFeed.Geography.Crawlers
                     metadata.Add("townCode", townCode);
                     metadata.Add("townName", townName);
                     url = e.Url.Substring(0, e.Url.LastIndexOf("/") + 1) + url;
-                    _logger.Info($"ParserTown->url[{url}]");
                     Request(url, ParserVillage, metadata, 4);
                 }
             }
@@ -165,13 +188,20 @@ namespace DataFeed.Geography.Crawlers
         {
             try
             {
+                _logger.Info($"ParserVillage->url[{e.Url}]");
                 var list = new List<GeographyModel>();
                 var htmlDoc = e.HtmlDocument;
                 var nodes = htmlDoc.DocumentNode.SelectNodes("//tr[@class='villagetr']");
+                if (nodes == null)
+                {
+                    _logger.Warn($"ParserVillage->can't find nodes for {e.Url}");
+                    _logger.Warn($"HtmlDocument->{e.HtmlDocument.Text}");
+                    return;
+                }
                 foreach (var node in nodes)
                 {
                     string villageCode = node.SelectSingleNode("td[1]").InnerText.Trim();
-                    string villageName = node.SelectSingleNode("td[2]").InnerText.Trim();
+                    string villageName = node.SelectSingleNode("td[3]").InnerText.Trim();
                     GeographyModel model = new GeographyModel()
                     {
                         ProvinceCode = e.Metadata["provinceCode"].ToString(),
