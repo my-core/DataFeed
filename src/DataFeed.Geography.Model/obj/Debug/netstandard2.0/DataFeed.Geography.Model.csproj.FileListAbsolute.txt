@@ -1,0 +1,8 @@
+F:\学习Demo\DataFeed\src\DataFeed.Geography.Model\bin\Debug\netstandard2.0\DataFeed.Geography.Model.deps.json
+F:\学习Demo\DataFeed\src\DataFeed.Geography.Model\bin\Debug\netstandard2.0\DataFeed.Geography.Model.dll
+F:\学习Demo\DataFeed\src\DataFeed.Geography.Model\obj\Debug\netstandard2.0\DataFeed.Geography.Model.csprojAssemblyReference.cache
+F:\学习Demo\DataFeed\src\DataFeed.Geography.Model\obj\Debug\netstandard2.0\DataFeed.Geography.Model.AssemblyInfoInputs.cache
+F:\学习Demo\DataFeed\src\DataFeed.Geography.Model\obj\Debug\netstandard2.0\DataFeed.Geography.Model.AssemblyInfo.cs
+F:\学习Demo\DataFeed\src\DataFeed.Geography.Model\bin\Debug\netstandard2.0\DataFeed.Geography.Model.pdb
+F:\学习Demo\DataFeed\src\DataFeed.Geography.Model\obj\Debug\netstandard2.0\DataFeed.Geography.Model.dll
+F:\学习Demo\DataFeed\src\DataFeed.Geography.Model\obj\Debug\netstandard2.0\DataFeed.Geography.Model.pdb

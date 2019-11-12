@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataFeed.Geography", "DataFeed.Geography\DataFeed.Geography.csproj", "{3AEC11CA-E5A0-42E3-8D46-5255DEF9CF9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataFeed.Geography.FeedMonitor", "DataFeed.Geography.FeedMonitor\DataFeed.Geography.FeedMonitor.csproj", "{0FC214F4-23D5-490C-AAFB-048C65D1F78C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataFeed.Geography.WebApi", "DataFeed.Geography.WebApi\DataFeed.Geography.WebApi.csproj", "{3D070B84-A9C5-41EA-8DEB-AA787D218C7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataFeed.Geography.Model", "DataFeed.Geography.Model\DataFeed.Geography.Model.csproj", "{4D5DC594-3E2F-4D9C-A05B-8BE902EE5186}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3AEC11CA-E5A0-42E3-8D46-5255DEF9CF9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3AEC11CA-E5A0-42E3-8D46-5255DEF9CF9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3AEC11CA-E5A0-42E3-8D46-5255DEF9CF9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3AEC11CA-E5A0-42E3-8D46-5255DEF9CF9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FC214F4-23D5-490C-AAFB-048C65D1F78C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FC214F4-23D5-490C-AAFB-048C65D1F78C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FC214F4-23D5-490C-AAFB-048C65D1F78C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FC214F4-23D5-490C-AAFB-048C65D1F78C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D070B84-A9C5-41EA-8DEB-AA787D218C7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D070B84-A9C5-41EA-8DEB-AA787D218C7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D070B84-A9C5-41EA-8DEB-AA787D218C7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D070B84-A9C5-41EA-8DEB-AA787D218C7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D5DC594-3E2F-4D9C-A05B-8BE902EE5186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D5DC594-3E2F-4D9C-A05B-8BE902EE5186}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D5DC594-3E2F-4D9C-A05B-8BE902EE5186}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D5DC594-3E2F-4D9C-A05B-8BE902EE5186}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
