@@ -37,7 +37,7 @@ namespace DataFeed.Geography.Crawlers
                 if (nodes == null)
                 {
                     _logger.Warn($"ParserProvince->can't find nodes for {e.Url}");
-                    _logger.Warn($"HtmlDocument->{e.HtmlDocument.Text}");
+                    Request(e.Url, ParserProvince, e.Metadata);
                     return;
                 }
                 foreach (var node in nodes)
@@ -49,7 +49,7 @@ namespace DataFeed.Geography.Crawlers
                     metadata.Add("provinceCode", provinceCode);
                     metadata.Add("provinceName", provinceName);
                     url = e.Url.Substring(0, e.Url.LastIndexOf("/") + 1) + url;
-                    Request(url, ParserCity, metadata, 1);
+                    Request(url, ParserCity, metadata);
                 };
             }
             catch(Exception ex)
@@ -71,7 +71,7 @@ namespace DataFeed.Geography.Crawlers
                 if (nodes == null)
                 {
                     _logger.Warn($"ParserCity->can't find nodes for {e.Url}");
-                    _logger.Warn($"HtmlDocument->{e.HtmlDocument.Text}");
+                    Request(e.Url, ParserCity, e.Metadata);
                     return;
                 }
                 foreach (var node in nodes)
@@ -90,11 +90,11 @@ namespace DataFeed.Geography.Crawlers
                     {
                         metadata.Add("countyCode", cityCode + "00");
                         metadata.Add("countyName", "市辖区");
-                        Request(url, ParserTown, metadata, 3);
+                        Request(url, ParserTown, metadata);
                     }
                     else
                     {
-                        Request(url, ParserCounty, metadata, 2);
+                        Request(url, ParserCounty, metadata);
                     }
                 }
             }
@@ -112,11 +112,12 @@ namespace DataFeed.Geography.Crawlers
             try
             {
                 var htmlDoc = e.HtmlDocument;
+                
                 var nodes = htmlDoc.DocumentNode.SelectNodes("//tr[@class='countytr']/td[2]/a");
                 if (nodes == null)
                 {
                     _logger.Warn($"ParserCounty->can't find nodes for {e.Url}");
-                    _logger.Warn($"HtmlDocument->{e.HtmlDocument.Text}");
+                    Request(e.Url, ParserCounty, e.Metadata);
                     return;
                 }
                 foreach (var node in nodes)
@@ -132,7 +133,7 @@ namespace DataFeed.Geography.Crawlers
                     metadata.Add("countyCode", countyCode);
                     metadata.Add("countyName", countyName);
                     url = e.Url.Substring(0, e.Url.LastIndexOf("/") + 1) + url;
-                    Request(url, ParserTown, metadata, 3);
+                    Request(url, ParserTown, metadata);
                 };
             }
             catch (Exception ex)
@@ -154,7 +155,7 @@ namespace DataFeed.Geography.Crawlers
                 if (nodes == null)
                 {
                     _logger.Warn($"ParserTown->can't find nodes for {e.Url}");
-                    _logger.Warn($"HtmlDocument->{e.HtmlDocument.Text}");
+                    Request(e.Url, ParserTown, e.Metadata);
                     return;
                 }
                 foreach (var node in nodes)
@@ -172,7 +173,7 @@ namespace DataFeed.Geography.Crawlers
                     metadata.Add("townCode", townCode);
                     metadata.Add("townName", townName);
                     url = e.Url.Substring(0, e.Url.LastIndexOf("/") + 1) + url;
-                    Request(url, ParserVillage, metadata, 4);
+                    Request(url, ParserVillage, metadata);
                 }
             }
             catch (Exception ex)
@@ -195,7 +196,7 @@ namespace DataFeed.Geography.Crawlers
                 if (nodes == null)
                 {
                     _logger.Warn($"ParserVillage->can't find nodes for {e.Url}");
-                    _logger.Warn($"HtmlDocument->{e.HtmlDocument.Text}");
+                    Request(e.Url, ParserVillage, e.Metadata);
                     return;
                 }
                 foreach (var node in nodes)
