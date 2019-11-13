@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="FastNet.Framework.Dapper" Version="1.0.0" />
     <PackageReference Include="FastNet.Framework.Mongo" Version="1.0.0" />
     <PackageReference Include="FastNet.Framework.NetCrawler" Version="1.0.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.0.0" />
@@ -38,6 +39,10 @@
 
   <ItemGroup>
     <Folder Include="Quartz\Jobs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataFeed.Geography.Model\DataFeed.Geography.Model.csproj" />
   </ItemGroup>
 
 </Project>

@@ -31,12 +31,14 @@ namespace DataFeed.Geography.FeedMonitor
                     services.AddSingleton(new CrawlOptions { MaxCrawlThread = 10 });
                     //db connection string
                     string mongoConnString = hostContext.Configuration.GetConnectionString("MongoDB");
+                    string datafeedConnString = hostContext.Configuration.GetConnectionString("DataFeedDB");
                     //repository
                     services.AddSingleton<IGeographyMongoRepository>(new GeographyMongoRepository(mongoConnString, "DataFeed"));
+                    services.AddSingleton<IGeographyRepository>(new GeographyRepository(datafeedConnString));
                     //service
                     services.AddSingleton<IGeographyService, GeographyService>();
                     //hostedservice
-                    //services.AddHostedService<GeographyHostedService>();
+                    services.AddHostedService<GeographyHostedService>();
                 }).ConfigureLogging((logging, builder) =>
                 {
                     builder.AddNLog();

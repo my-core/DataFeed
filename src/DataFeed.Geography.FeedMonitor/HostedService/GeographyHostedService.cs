@@ -1,5 +1,6 @@
 
 using DataFeed.Geography.FeedMonitor.Crawlers;
+using DataFeed.Geography.FeedMonitor.Service;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Quartz;
@@ -17,15 +18,23 @@ namespace DataFeed.Geography.FeedMonitor.Quartz
     {
         private ILogger<GeographyHostedService> _logger;
         private GeographyCrawler _crawler;
-        public GeographyHostedService(ILogger<GeographyHostedService> logger, GeographyCrawler crawler)
+        private IGeographyService _geographyService;
+        public GeographyHostedService(ILogger<GeographyHostedService> logger, GeographyCrawler crawler, IGeographyService geographyService)
         {
             _logger = logger;
             _crawler = crawler;
+            _geographyService = geographyService;
         }
         public Task StartAsync(CancellationToken cancellationToken)
         {
             _logger.LogInformation("QuartzService start");
-            _crawler.StartRequest();
+
+            //同上国家统计局的省市区镇乡数据
+            //_crawler.StartRequest();
+
+            //处理数据，清洗抓取的省市区镇乡数据并保存到mysql库
+            _geographyService.HandleGeographyData();
+
             return Task.CompletedTask;
         }
 
