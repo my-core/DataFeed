@@ -14,18 +14,30 @@ namespace DataFeed.Geography.Model
     public class CountyInfo
     {
         /// <summary>
-        /// 地区编码
+        /// 地区ID
         /// </summary>
-        public string CountyCode { get; set; }
-
-        /// <summary>
-        /// 地区名
-        /// </summary>
-        public string CountyName { get; set; }
-
+        public int CountyID { get; set; }
         /// <summary>
         /// 所属城市编码
         /// </summary>
         public int CityCode { get; set; }
+        /// <summary>
+        /// 地区编码
+        /// </summary>
+        public string CountyCode { get; set; }
+        /// <summary>
+        /// 地区名
+        /// </summary>
+        public string CountyName { get; set; }
+        /// <summary>
+        /// 拼音
+        /// </summary>
+        public string Spell { get; set; }
+        /// <summary>
+        /// 拼音
+        /// </summary>
+        public string FirstLetter { get; set; }
+
+
     }
 }

@@ -14,33 +14,30 @@ namespace DataFeed.Geography.Model
     public class CityInfo
     {
         /// <summary>
-        /// 
+        /// 城市ID
         /// </summary>
-        public int ID { get; set; }
-
+        public int CityID { get; set; }
+        /// <summary>
+        /// 所属省
+        /// </summary>
+        public int ProvinceCode { get; set; }
         /// <summary>
         /// 城市名
         /// </summary>
         public string CityName { get; set; }
-
         /// <summary>
         /// 拼音
         /// </summary>
         public string Spell { get; set; }
-
         /// <summary>
         /// 首字母
         /// </summary>
         public string FirstLetter { get; set; }
-
         /// <summary>
         /// 邮编
         /// </summary>
         public string ZipCode { get; set; }
 
-        /// <summary>
-        /// 所属省
-        /// </summary>
-        public int ProvinceCode { get; set; }
+        
     }
 }
