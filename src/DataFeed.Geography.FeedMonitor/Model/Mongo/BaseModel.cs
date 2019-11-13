@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DataFeed.Geography.Model.Mongo
+namespace DataFeed.Geography.FeedMonitor.Model.Mongo
 {
     /// <summary>
     /// Mongodb基类

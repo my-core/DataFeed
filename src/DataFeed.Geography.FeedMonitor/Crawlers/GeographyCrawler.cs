@@ -1,12 +1,12 @@
-﻿using DataFeed.Geography.Model.Mongo;
-using DataFeed.Geography.Service;
+﻿using DataFeed.Geography.FeedMonitor.Model.Mongo;
+using DataFeed.Geography.FeedMonitor.Service;
 using FastNet.Framework.NetCrawler;
 using NLog;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace DataFeed.Geography.Crawlers
+namespace DataFeed.Geography.FeedMonitor.Crawlers
 {
     public class GeographyCrawler : Crawler
     {

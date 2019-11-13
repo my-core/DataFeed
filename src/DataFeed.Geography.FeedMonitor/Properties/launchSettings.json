@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "DataFeed.Geography": {
+    "DataFeed.Geography.FeedMonitor": {
       "commandName": "Project",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

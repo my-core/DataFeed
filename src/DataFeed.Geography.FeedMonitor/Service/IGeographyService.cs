@@ -1,11 +1,11 @@
-﻿using DataFeed.Geography.Model.Mongo;
-using DataFeed.Geography.Repository.Mongodb;
+﻿using DataFeed.Geography.FeedMonitor.Model.Mongo;
+using DataFeed.Geography.FeedMonitor.Repository.Mongodb;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DataFeed.Geography.Service
+namespace DataFeed.Geography.FeedMonitor.Service
 {
     public interface IGeographyService
     {

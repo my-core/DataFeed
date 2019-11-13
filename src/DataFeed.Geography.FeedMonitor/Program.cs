@@ -1,16 +1,16 @@
 
 using System.Text;
-using DataFeed.Geography.Crawlers;
-using DataFeed.Geography.Quartz;
-using DataFeed.Geography.Repository.Mongodb;
-using DataFeed.Geography.Service;
+using DataFeed.Geography.FeedMonitor.Crawlers;
+using DataFeed.Geography.FeedMonitor.Quartz;
+using DataFeed.Geography.FeedMonitor.Repository.Mongodb;
+using DataFeed.Geography.FeedMonitor.Service;
 using FastNet.Framework.NetCrawler;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NLog.Extensions.Logging;
 
-namespace DataFeed.Geography
+namespace DataFeed.Geography.FeedMonitor
 {
     public class Program
     {
@@ -36,7 +36,7 @@ namespace DataFeed.Geography
                     //service
                     services.AddSingleton<IGeographyService, GeographyService>();
                     //hostedservice
-                    services.AddHostedService<GeographyHostedService>();
+                    //services.AddHostedService<GeographyHostedService>();
                 }).ConfigureLogging((logging, builder) =>
                 {
                     builder.AddNLog();

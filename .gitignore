@@ -1,2 +1,8 @@
 /src/DataFeed.Geography/obj
 /src/DataFeed.Geography/bin
+/src/DataFeed.Geography.FeedMonitor/obj
+/src/DataFeed.Geography.FeedMonitor/bin
+/src/DataFeed.Geography.Model/obj
+/src/DataFeed.Geography.Model/bin
+/src/DataFeed.Geography.WebApi/obj
+/src/DataFeed.Geography.WebApi/bin

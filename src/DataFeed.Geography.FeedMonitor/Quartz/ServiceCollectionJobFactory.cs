@@ -4,7 +4,7 @@ using Quartz.Spi;
 using System;
 using System.Collections.Concurrent;
 
-namespace DataFeed.Geography.Quartz
+namespace DataFeed.Geography.FeedMonitor.Quartz
 {
     /// <summary>
     /// 实现Job的注入(quartz默认情况下，它仅支持无参数构造函数)

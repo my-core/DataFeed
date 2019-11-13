@@ -7,7 +7,7 @@ using FastNet.Framework.Mongo;
 
 using MongoDB.Driver;
 
-namespace DataFeed.Geography.Repository.Mongodb
+namespace DataFeed.Geography.FeedMonitor.Repository.Mongodb
 {
     public class GeographyMongoRepository : MongoRepository, IGeographyMongoRepository
     {

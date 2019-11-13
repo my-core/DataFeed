@@ -1,5 +1,5 @@
 
-using DataFeed.Geography.Crawlers;
+using DataFeed.Geography.FeedMonitor.Crawlers;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Quartz;
@@ -8,7 +8,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace DataFeed.Geography.Quartz
+namespace DataFeed.Geography.FeedMonitor.Quartz
 {
     /// <summary>
     /// Quartz定时调度服务

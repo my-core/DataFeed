@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DataFeed.Geography.Model.Mongo
+namespace DataFeed.Geography.FeedMonitor.Model.Mongo
 {
     public class GeographyModel: BaseModel
     {
