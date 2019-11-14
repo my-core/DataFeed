@@ -37,7 +37,14 @@ namespace DataFeed.Geography.FeedMonitor.Service
         /// </summary>
         public void HandleGeographyData()
         {
-            HandleProvinceData();
+            try
+            {
+                HandleProvinceData();
+            }
+            catch(Exception ex)
+            {
+                _logger.LogError(ex, "HandleGeographyData");
+            }
         }
 
         /// <summary>
