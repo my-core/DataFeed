@@ -8,25 +8,25 @@ using System.Threading.Tasks;
 namespace DataFeed.Geography.Model
 {
     /// <summary>
-    /// 地区信息
+    /// 区信息
     /// </summary>    
-    [Table("County")]
+    [Table("geo_county")]
     public class CountyInfo
     {
         /// <summary>
-        /// 地区ID
+        /// 区ID
         /// </summary>
         public int CountyID { get; set; }
         /// <summary>
         /// 所属城市编码
         /// </summary>
-        public int CityCode { get; set; }
+        public string CityCode { get; set; }
         /// <summary>
-        /// 地区编码
+        /// 区编码
         /// </summary>
         public string CountyCode { get; set; }
         /// <summary>
-        /// 地区名
+        /// 区名
         /// </summary>
         public string CountyName { get; set; }
         /// <summary>

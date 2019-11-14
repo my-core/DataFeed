@@ -10,7 +10,7 @@ namespace DataFeed.Geography.Model
     /// <summary>
     /// 城市信息
     /// </summary>    
-    [Table("City")]
+    [Table("geo_city")]
     public class CityInfo
     {
         /// <summary>
@@ -20,7 +20,11 @@ namespace DataFeed.Geography.Model
         /// <summary>
         /// 所属省
         /// </summary>
-        public int ProvinceCode { get; set; }
+        public string ProvinceCode { get; set; }
+        /// <summary>
+        /// 城市编码
+        /// </summary>
+        public string CityCode { get; set; }
         /// <summary>
         /// 城市名
         /// </summary>

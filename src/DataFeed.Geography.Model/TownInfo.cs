@@ -8,34 +8,36 @@ using System.Threading.Tasks;
 namespace DataFeed.Geography.Model
 {
     /// <summary>
-    /// 省信息
+    /// 镇信息
     /// </summary>    
-    [Table("geo_province")]
-    public class ProvinceInfo
+    [Table("geo_town")]
+    public class TownInfo
     {
         /// <summary>
-        /// 省ID
+        /// 镇ID
         /// </summary>
-        public int ProvinceID { get; set; }
+        public int TownID { get; set; }
         /// <summary>
-        /// 省编码
+        /// 区编码
         /// </summary>
-        public string ProvinceCode { get; set; }
+        public string CountyCode { get; set; }
         /// <summary>
-        /// 省名称
+        /// 镇编码
         /// </summary>
-        public string ProvinceName { get; set; }
+        public string TownCode { get; set; }
         /// <summary>
-        /// 简称
+        /// 镇名
         /// </summary>
-        public string ShorName { get; set; }
+        public string TownName { get; set; }
         /// <summary>
         /// 拼音
         /// </summary>
         public string Spell { get; set; }
         /// <summary>
-        /// 首字母
+        /// 拼音
         /// </summary>
         public string FirstLetter { get; set; }
+
+
     }
 }

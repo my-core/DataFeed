@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DataFeed.Geography.FeedMonitor
 {
-    public class GeographyRepository : SQLServerRepository, IGeographyRepository
+    public class GeographyRepository : MySqlRepository, IGeographyRepository
     {
         public GeographyRepository(string connString)
             : base(connString)
