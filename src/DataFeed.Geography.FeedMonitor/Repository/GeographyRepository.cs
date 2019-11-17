@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataFeed.Framework.Repository;
+using System;
 using System.Collections.Generic;
 using System.Text;
 

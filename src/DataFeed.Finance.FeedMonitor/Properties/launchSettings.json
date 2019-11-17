@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "DataFeed.Finance.FeedMonitor": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

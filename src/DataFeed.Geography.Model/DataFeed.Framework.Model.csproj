@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>F:\学习Demo\DataFeed\src\DataFeed.Geography.Model\DataFeed.Framework.Model.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="DataFeed.Framework.Model.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FastNet.Framework.Dapper" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="DataFeed.Framework.Model.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Enums\" />
+  </ItemGroup>
+
+</Project>

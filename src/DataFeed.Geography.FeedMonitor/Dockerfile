@@ -4,7 +4,8 @@ WORKDIR /app
 FROM mcr.microsoft.com/dotnet/core/sdk:3.0-buster AS build
 WORKDIR /src
 COPY ["DataFeed.Geography.FeedMonitor/DataFeed.Geography.FeedMonitor.csproj", "./"]
-COPY ["DataFeed.Geography.Model/DataFeed.Geography.Model.csproj", "./"]
+COPY ["DataFeed.Framework.Repository/DataFeed.Framework.Repository.csproj", "./"]
+COPY ["DataFeed.Framework.Model/DataFeed.Framework.Model.csproj", "./"]
 RUN dotnet restore "DataFeed.Geography.FeedMonitor.csproj"
 WORKDIR "/src/DataFeed.Geography.FeedMonitor"
 COPY . .

@@ -1,0 +1,241 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DataFeed.Geography.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:DataFeed.Geography.WebApi.Contract.Response.ApiResponse">
+            <summary>
+            接口响应基类
+            </summary>
+        </member>
+        <member name="P:DataFeed.Geography.WebApi.Contract.Response.ApiResponse.IsOK">
+            <summary>
+            请求是成功
+            </summary>
+        </member>
+        <member name="P:DataFeed.Geography.WebApi.Contract.Response.ApiResponse.Code">
+            <summary>
+            消息码(200- 成功 500-服务异常)
+            </summary>
+        </member>
+        <member name="P:DataFeed.Geography.WebApi.Contract.Response.ApiResponse.Message">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="T:DataFeed.Geography.WebApi.Contract.Response.ApiResponse`1">
+            <summary>
+            接口响应基类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:DataFeed.Geography.WebApi.Contract.Response.ApiResponse`1.Data">
+            <summary>
+             响应数据
+            </summary>
+        </member>
+        <member name="T:DataFeed.Geography.WebApi.Contract.Response.GetCityResponse">
+            <summary>
+            城市信息
+            </summary>    
+        </member>
+        <member name="P:DataFeed.Geography.WebApi.Contract.Response.GetCityResponse.CityCode">
+            <summary>
+            城市编码
+            </summary>
+        </member>
+        <member name="P:DataFeed.Geography.WebApi.Contract.Response.GetCityResponse.CityName">
+            <summary>
+            城市名
+            </summary>
+        </member>
+        <member name="P:DataFeed.Geography.WebApi.Contract.Response.GetCityResponse.Spell">
+            <summary>
+            拼音
+            </summary>
+        </member>
+        <member name="P:DataFeed.Geography.WebApi.Contract.Response.GetCityResponse.FirstLetter">
+            <summary>
+            首字母
+            </summary>
+        </member>
+        <member name="T:DataFeed.Geography.WebApi.Contract.Response.GetCountyResponse">
+            <summary>
+            区信息
+            </summary>
+        </member>
+        <member name="P:DataFeed.Geography.WebApi.Contract.Response.GetCountyResponse.CountyCode">
+            <summary>
+            区编码
+            </summary>
+        </member>
+        <member name="P:DataFeed.Geography.WebApi.Contract.Response.GetCountyResponse.CountyName">
+            <summary>
+            区名
+            </summary>
+        </member>
+        <member name="P:DataFeed.Geography.WebApi.Contract.Response.GetCountyResponse.Spell">
+            <summary>
+            拼音
+            </summary>
+        </member>
+        <member name="P:DataFeed.Geography.WebApi.Contract.Response.GetCountyResponse.FirstLetter">
+            <summary>
+            拼音
+            </summary>
+        </member>
+        <member name="T:DataFeed.Geography.WebApi.Contract.Response.GetProvinceResponse">
+            <summary>
+            省信息
+            </summary>
+        </member>
+        <member name="P:DataFeed.Geography.WebApi.Contract.Response.GetProvinceResponse.ProvinceCode">
+            <summary>
+            省编码
+            </summary>
+        </member>
+        <member name="P:DataFeed.Geography.WebApi.Contract.Response.GetProvinceResponse.ProvinceName">
+            <summary>
+            省名称
+            </summary>
+        </member>
+        <member name="P:DataFeed.Geography.WebApi.Contract.Response.GetProvinceResponse.ShorName">
+            <summary>
+            简称
+            </summary>
+        </member>
+        <member name="P:DataFeed.Geography.WebApi.Contract.Response.GetProvinceResponse.Spell">
+            <summary>
+            拼音
+            </summary>
+        </member>
+        <member name="P:DataFeed.Geography.WebApi.Contract.Response.GetProvinceResponse.FirstLetter">
+            <summary>
+            首字母
+            </summary>
+        </member>
+        <member name="T:DataFeed.Geography.WebApi.Contract.Response.GetTownResponse">
+            <summary>
+            镇信息
+            </summary>
+        </member>
+        <member name="P:DataFeed.Geography.WebApi.Contract.Response.GetTownResponse.TownCode">
+            <summary>
+            镇编码
+            </summary>
+        </member>
+        <member name="P:DataFeed.Geography.WebApi.Contract.Response.GetTownResponse.TownName">
+            <summary>
+            镇名
+            </summary>
+        </member>
+        <member name="P:DataFeed.Geography.WebApi.Contract.Response.GetTownResponse.Spell">
+            <summary>
+            拼音
+            </summary>
+        </member>
+        <member name="P:DataFeed.Geography.WebApi.Contract.Response.GetTownResponse.FirstLetter">
+            <summary>
+            拼音
+            </summary>
+        </member>
+        <member name="T:DataFeed.Geography.WebApi.Contract.Response.GetVillageResponse">
+            <summary>
+            乡村信息
+            </summary>
+        </member>
+        <member name="P:DataFeed.Geography.WebApi.Contract.Response.GetVillageResponse.VillageCode">
+            <summary>
+            乡村编码
+            </summary>
+        </member>
+        <member name="P:DataFeed.Geography.WebApi.Contract.Response.GetVillageResponse.VillageName">
+            <summary>
+            乡村名
+            </summary>
+        </member>
+        <member name="P:DataFeed.Geography.WebApi.Contract.Response.GetVillageResponse.Spell">
+            <summary>
+            拼音
+            </summary>
+        </member>
+        <member name="P:DataFeed.Geography.WebApi.Contract.Response.GetVillageResponse.FirstLetter">
+            <summary>
+            拼音
+            </summary>
+        </member>
+        <member name="M:DataFeed.Geography.WebApi.Controllers.GeoController.ProvinceList">
+            <summary>
+            获取省信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataFeed.Geography.WebApi.Controllers.GeoController.CityList(System.String)">
+            <summary>
+            获取市信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataFeed.Geography.WebApi.Controllers.GeoController.CountyList(System.String)">
+            <summary>
+            获取区信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataFeed.Geography.WebApi.Controllers.GeoController.TownList(System.String)">
+            <summary>
+            获取镇信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataFeed.Geography.WebApi.Controllers.GeoController.VillageList(System.String)">
+            <summary>
+            获取村信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:DataFeed.Geography.WebApi.MapperProfile">
+            <summary>
+            automapper 映射
+            </summary>
+        </member>
+        <member name="M:DataFeed.Geography.WebApi.Service.GeographyService.GetProvinceList">
+            <summary>
+            省
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataFeed.Geography.WebApi.Service.GeographyService.GetCityList(System.String)">
+            <summary>
+            市
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataFeed.Geography.WebApi.Service.GeographyService.GetCountyList(System.String)">
+            <summary>
+            区
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataFeed.Geography.WebApi.Service.GeographyService.GetTownList(System.String)">
+            <summary>
+            镇
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataFeed.Geography.WebApi.Service.GeographyService.GetVillageList(System.String)">
+            <summary>
+            村
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataFeed.Geography.WebApi.StartupExtensions.ConfigureSwaggerServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            https://www.cnblogs.com/taotaozhuanyong/p/11602820.html
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+        </member>
+    </members>
+</doc>

@@ -3,8 +3,6 @@ using DataFeed.Geography.FeedMonitor.Crawlers;
 using DataFeed.Geography.FeedMonitor.Service;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Quartz;
-using Quartz.Impl;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -33,7 +31,7 @@ namespace DataFeed.Geography.FeedMonitor.Quartz
             //_crawler.StartRequest();
 
             //处理数据，清洗抓取的省市区镇乡数据并保存到mysql库
-            _geographyService.HandleGeographyData();
+            //_geographyService.HandleGeographyData();
 
             return Task.CompletedTask;
         }

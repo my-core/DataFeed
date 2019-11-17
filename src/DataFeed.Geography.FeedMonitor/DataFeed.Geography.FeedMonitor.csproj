@@ -13,7 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="FastNet.Framework.Dapper" Version="1.0.0" />
     <PackageReference Include="FastNet.Framework.Mongo" Version="1.0.0" />
     <PackageReference Include="FastNet.Framework.NetCrawler" Version="1.0.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.0.0" />
@@ -22,7 +21,7 @@
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="NLog.Extensions.Logging" Version="1.6.1" />
     <PackageReference Include="NPinyin.Core" Version="3.0.0" />
-    <PackageReference Include="Quartz" Version="3.0.7" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0-rc4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -41,11 +40,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Quartz\Jobs\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\DataFeed.Geography.Model\DataFeed.Geography.Model.csproj" />
+    <ProjectReference Include="..\DataFeed.Framework.Repository\DataFeed.Framework.Repository.csproj" />
+    <ProjectReference Include="..\DataFeed.Geography.Model\DataFeed.Framework.Model.csproj" />
   </ItemGroup>
 
 </Project>

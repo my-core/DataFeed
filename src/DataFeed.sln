@@ -5,9 +5,21 @@ VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataFeed.Geography.FeedMonitor", "DataFeed.Geography.FeedMonitor\DataFeed.Geography.FeedMonitor.csproj", "{0FC214F4-23D5-490C-AAFB-048C65D1F78C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataFeed.Geography.WebApi", "DataFeed.Geography.WebApi\DataFeed.Geography.WebApi.csproj", "{3D070B84-A9C5-41EA-8DEB-AA787D218C7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataFeed.Geography.WebApi", "DataFeed.Geography.WebApi\DataFeed.Geography.WebApi.csproj", "{3D070B84-A9C5-41EA-8DEB-AA787D218C7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataFeed.Geography.Model", "DataFeed.Geography.Model\DataFeed.Geography.Model.csproj", "{4D5DC594-3E2F-4D9C-A05B-8BE902EE5186}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataFeed.Framework.Model", "DataFeed.Geography.Model\DataFeed.Framework.Model.csproj", "{4D5DC594-3E2F-4D9C-A05B-8BE902EE5186}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataFeed.Finance.WebApi", "DataFeed.Finance.WebApi\DataFeed.Finance.WebApi.csproj", "{1AEE10FA-4250-4C1E-ADD3-743E330690EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{2E445707-B77C-42BB-89F1-6EB9DE437A24}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataFeed.Framework.Repository", "DataFeed.Framework.Repository\DataFeed.Framework.Repository.csproj", "{1C47681D-6D09-4F07-9AC8-F2E1080E3561}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataFeed.Framework.Service", "DataFeed.Framework.Service\DataFeed.Framework.Service.csproj", "{300AA0AB-CBC4-4E5F-BA60-87351B5A5175}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataFeed.Framework.Enums", "DataFeed.Framework.Enums\DataFeed.Framework.Enums.csproj", "{922668F2-C835-49F0-BFC0-1EEE7AD16286}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataFeed.Finance.FeedMonitor", "DataFeed.Finance.FeedMonitor\DataFeed.Finance.FeedMonitor.csproj", "{66CC9FE6-470D-4336-A7CD-A7D026039770}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,9 +39,35 @@ Global
 		{4D5DC594-3E2F-4D9C-A05B-8BE902EE5186}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D5DC594-3E2F-4D9C-A05B-8BE902EE5186}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D5DC594-3E2F-4D9C-A05B-8BE902EE5186}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AEE10FA-4250-4C1E-ADD3-743E330690EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AEE10FA-4250-4C1E-ADD3-743E330690EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AEE10FA-4250-4C1E-ADD3-743E330690EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AEE10FA-4250-4C1E-ADD3-743E330690EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C47681D-6D09-4F07-9AC8-F2E1080E3561}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C47681D-6D09-4F07-9AC8-F2E1080E3561}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C47681D-6D09-4F07-9AC8-F2E1080E3561}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C47681D-6D09-4F07-9AC8-F2E1080E3561}.Release|Any CPU.Build.0 = Release|Any CPU
+		{300AA0AB-CBC4-4E5F-BA60-87351B5A5175}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{300AA0AB-CBC4-4E5F-BA60-87351B5A5175}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{300AA0AB-CBC4-4E5F-BA60-87351B5A5175}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{300AA0AB-CBC4-4E5F-BA60-87351B5A5175}.Release|Any CPU.Build.0 = Release|Any CPU
+		{922668F2-C835-49F0-BFC0-1EEE7AD16286}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{922668F2-C835-49F0-BFC0-1EEE7AD16286}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{922668F2-C835-49F0-BFC0-1EEE7AD16286}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{922668F2-C835-49F0-BFC0-1EEE7AD16286}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66CC9FE6-470D-4336-A7CD-A7D026039770}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66CC9FE6-470D-4336-A7CD-A7D026039770}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66CC9FE6-470D-4336-A7CD-A7D026039770}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66CC9FE6-470D-4336-A7CD-A7D026039770}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4D5DC594-3E2F-4D9C-A05B-8BE902EE5186} = {2E445707-B77C-42BB-89F1-6EB9DE437A24}
+		{1C47681D-6D09-4F07-9AC8-F2E1080E3561} = {2E445707-B77C-42BB-89F1-6EB9DE437A24}
+		{300AA0AB-CBC4-4E5F-BA60-87351B5A5175} = {2E445707-B77C-42BB-89F1-6EB9DE437A24}
+		{922668F2-C835-49F0-BFC0-1EEE7AD16286} = {2E445707-B77C-42BB-89F1-6EB9DE437A24}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {269A0436-CD9C-410B-899E-4F952E65B2C5}
