@@ -1,7 +1,0 @@
-F:\学习Demo\DataFeed\src\DataFeed.Framework.Enums\bin\Debug\netstandard2.0\DataFeed.Framework.Enums.deps.json
-F:\学习Demo\DataFeed\src\DataFeed.Framework.Enums\bin\Debug\netstandard2.0\DataFeed.Framework.Enums.dll
-F:\学习Demo\DataFeed\src\DataFeed.Framework.Enums\bin\Debug\netstandard2.0\DataFeed.Framework.Enums.pdb
-F:\学习Demo\DataFeed\src\DataFeed.Framework.Enums\obj\Debug\netstandard2.0\DataFeed.Framework.Enums.AssemblyInfoInputs.cache
-F:\学习Demo\DataFeed\src\DataFeed.Framework.Enums\obj\Debug\netstandard2.0\DataFeed.Framework.Enums.AssemblyInfo.cs
-F:\学习Demo\DataFeed\src\DataFeed.Framework.Enums\obj\Debug\netstandard2.0\DataFeed.Framework.Enums.dll
-F:\学习Demo\DataFeed\src\DataFeed.Framework.Enums\obj\Debug\netstandard2.0\DataFeed.Framework.Enums.pdb
