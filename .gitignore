@@ -7,3 +7,13 @@
 /src/DataFeed.Geography.WebApi/obj
 /src/DataFeed.Geography.WebApi/bin
 /src/.vs
+/src/DataFeed.Framework.Repository/bin
+/src/DataFeed.Finance.WebApi/bin
+/src/DataFeed.Finance.FeedMonitor/bin
+/src/DataFeed.Framework.Enums/bin
+/src/DataFeed.Framework.Service/bin
+/src/DataFeed.Finance.FeedMonitor/obj
+/src/DataFeed.Finance.WebApi/obj
+/src/DataFeed.Framework.Repository/obj
+/src/DataFeed.Framework.Service/obj
+/src/DataFeed.Framework.Enums/obj
