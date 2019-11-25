@@ -1,0 +1,54 @@
+﻿@model AdminInfo
+
+<body>
+    <form id="UserAdd" class="layui-form layui-form-pane"
+          asp-controller="System" asp-action="UserPwd"
+          data-ajax="true"
+          data-ajax-mode="replace"
+          data-ajax-update="#"
+          data-ajax-method="Post"
+          data-ajax-success="Callback">
+
+
+        <table class="post-form">
+            <tr>
+                <th style="width: 80px;">管理员名：</th>
+                <td>
+                    @Html.Label("AdminName", Model.AdminName)
+                </td>
+            </tr>
+            <tr>
+                <th>登录密码：</th>
+                <td>
+                    <input id="Password" name="Password" lay-verify="required" lay-msg="请输入登录密码" class="layui-input" type="text" value="">
+                </td>
+            </tr>
+            <tr>
+                <th>确认密码：</th>
+                <td>
+                    <input id="Password0" name="Password0" lay-verify="confirmPassword" class="layui-input" type="text" value="">
+                </td>
+            </tr>
+            <tr>
+                <th></th>
+                <td>
+                    <button type="submit" class="layui-btn" lay-submit="" lay-filter="post">保 存</button>
+                    <a href="javascript:void(0)" onclick="parent.CloseWindow();" class="layui-btn layui-btn-normal">取消</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        layui.use(['form'], function () {
+            var form = layui.form
+            //自定义验证规则
+            form.verify({
+                confirmPassword: function (value) {
+                    if (value != $('#Password').val()) {
+                        return '两次输入密码不一致！';
+                    }
+                }
+            });
+        });
+    </script>
+</body>

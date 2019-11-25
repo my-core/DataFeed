@@ -1,0 +1,68 @@
+﻿@model List<AuthInfo>
+@{
+    ViewBag.Title = "权限列表";
+}
+<script>
+    function GetType(t) {
+        if (t == 1) {
+            document.write('模块');
+        }
+        if (t == 2)
+            document.write('页面');
+        if (t == 3)
+            document.write('操作');
+    }
+</script>
+
+<div class="container">
+    <div style="padding:0px 10px;">
+        <a class="layui-btn layui-btn-sm layui-btn-normal" href="javascript:void(0);" onclick="AddOrEdit()">
+            <i class="layui-icon layui-icon-tianjia2"></i>添加权限
+        </a>
+    </div>
+    <table class="layui-table" id="list">
+        <thead>
+            <tr>
+                <th style="width:45px; text-align:center;">#</th>
+                <th>权限ID</th>
+                <th>权限名</th>
+                <th>权限编码</th>
+                <th>类型</th>
+                <th>Url地址</th>
+                <th>排序号</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{ int index = 1;}
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td style="width:45px; text-align:center;">@(index++)</td>
+                    <td>@item.ID</td>
+                    <td>@Html.Raw(item.AuthName)</td>
+                    <td>@item.AuthCode</td>
+                    <td>
+                        <script>GetType(@item.AuthType)</script>
+                    </td>
+                    <td>@item.Url</td>
+                    <td>@item.Sort</td>
+                    <td>
+                        <a class="layui-btn layui-btn-normal layui-btn-xs" onclick="AddOrEdit('@item.ID')"><i class="layui-icon layui-icon-bianji"></i>编辑</a>
+                        <a class="layui-btn layui-btn-danger layui-btn-xs" onclick="javascript:Delete('/System/AuthDelete/@item.ID');"><i class="layui-icon layui-icon-delete"></i>删除</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<script>
+    function AddOrEdit(id) {
+        if (id == undefined) {
+            ShowWindow('===添加权限信息===', '/System/AuthAdd', 600, 400);
+        }
+        else {
+            ShowWindow('===编辑权限信息===', '/System/AuthAdd/' + id, 600, 400);
+        }
+    }
+</script>

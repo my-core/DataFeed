@@ -65,6 +65,18 @@
             上市时间
             </summary>
         </member>
+        <member name="T:DataFeed.Finance.WebApi.Controllers.StockController">
+            <summary>
+            股票信息接口
+            </summary>
+        </member>
+        <member name="M:DataFeed.Finance.WebApi.Controllers.StockController.#ctor(Microsoft.Extensions.Logging.ILogger{DataFeed.Finance.WebApi.Controllers.StockController},DataFeed.Finance.WebApi.Service.FinanceService)">
+            <summary>
+            ctor
+            </summary>
+            <param name="logger"></param>
+            <param name="financeService"></param>
+        </member>
         <member name="M:DataFeed.Finance.WebApi.Controllers.StockController.GetStockCodeList(System.Int32,System.Int32)">
             <summary>
             获取股票代码信息
@@ -78,6 +90,17 @@
             automapper 映射
             </summary>
         </member>
+        <member name="T:DataFeed.Finance.WebApi.Repository.FinanceRepository">
+            <summary>
+            金融相关数据层接口
+            </summary>
+        </member>
+        <member name="M:DataFeed.Finance.WebApi.Repository.FinanceRepository.#ctor(System.String)">
+            <summary>
+            ctor
+            </summary>
+            <param name="connString"></param>
+        </member>
         <member name="M:DataFeed.Finance.WebApi.Repository.FinanceRepository.GetStockCodeList(DataFeed.Finance.WebApi.Contract.Request.GetStockCodeRequest)">
             <summary>
             获取股票信息
@@ -85,11 +108,52 @@
             <param name="request"></param>
             <returns></returns>
         </member>
+        <member name="T:DataFeed.Finance.WebApi.Service.FinanceService">
+            <summary>
+            金融相关业务
+            </summary>
+        </member>
+        <member name="M:DataFeed.Finance.WebApi.Service.FinanceService.#ctor(DataFeed.Finance.WebApi.Repository.FinanceRepository,AutoMapper.IMapper)">
+            <summary>
+            ctor
+            </summary>
+            <param name="financeRepository"></param>
+            <param name="mapper"></param>
+        </member>
         <member name="M:DataFeed.Finance.WebApi.Service.FinanceService.GetStockCodeList(DataFeed.Finance.WebApi.Contract.Request.GetStockCodeRequest)">
             <summary>
             股票代码
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:DataFeed.Finance.WebApi.Startup">
+            <summary>
+            Startup
+            </summary>
+        </member>
+        <member name="M:DataFeed.Finance.WebApi.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            ctor
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:DataFeed.Finance.WebApi.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:DataFeed.Finance.WebApi.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+        <member name="T:DataFeed.Finance.WebApi.StartupExtensions">
+            <summary>
+            StartupExtensions
+            </summary>
         </member>
         <member name="M:DataFeed.Finance.WebApi.StartupExtensions.ConfigureSwaggerServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
             <summary>

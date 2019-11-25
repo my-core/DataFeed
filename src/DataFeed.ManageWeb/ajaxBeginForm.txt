@@ -1,0 +1,54 @@
+﻿ 取代Ajax.BeginForm的ajax使用方法
+一、前提概要
+
+Asp.net core中已经取消了Ajax.BeginForm，也不会计划出ajax tag helper，所以得利用插件jquery-ajax-unobtrusive，在form中加入相关data-*属性
+二、参考资料
+
+https://github.com/aspnet/Mvc/issues/2015
+
+http://bradwilson.typepad.com/blog/2010/10/mvc3-unobtrusive-ajax.html
+三、使用方法
+1、AjaxOptions与HTML属性的对照表：
+
++------------------------+-----------------------------+
+|      AjaxOptions       |       HTML attribute        |
++------------------------+-----------------------------+
+| Confirm                | data-ajax-confirm           |
+| HttpMethod             | data-ajax-method            |
+| InsertionMode          | data-ajax-mode              |
+| LoadingElementDuration | data-ajax-loading-duration  |
+| LoadingElementId       | data-ajax-loading           |
+| OnBegin                | data-ajax-begin             |
+| OnComplete             | data-ajax-complete          |
+| OnFailure              | data-ajax-failure           |
+| OnSuccess              | data-ajax-success           |
+| UpdateTargetId         | data-ajax-update            |
+| Url                    | data-ajax-url               |
++------------------------+-----------------------------+
+
+ 
+2、在form中配置
+复制代码
+
+<form asp-controller="ControllerName" 
+	asp-action="ActionName"  
+	data-ajax="true" 
+	data-ajax-mode="replace" 
+	data-ajax-loading="search-info-ajax" 
+	data-ajax-update="#info-list" 
+	data-ajax-success="testajaxsuccess" 
+	data-ajax-method="get">
+</form>
+
+<div id="info-list" class="col-md-12">
+</div>
+
+ 
+
+复制代码
+3、注意事项：
+
+    data-ajax="true" 必须指定
+    data-ajax-update="#device-info-list" 中的ID必须加上"#"
+    data-ajax-method="get" 中必须指定method
+    data-ajax-mode="replace" 必须指定，选项有replace,replace-with, before, after

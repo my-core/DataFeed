@@ -1,0 +1,95 @@
+﻿
+@model RoleInfo
+<link href="/lib/zTree_v3/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" />
+<body>
+    
+    <form id="RoleAdd" class="layui-form layui-form-pane"
+          asp-controller="System" asp-action="RoleAdd"
+          data-ajax="true"
+          data-ajax-mode="replace"
+          data-ajax-update="#"
+          data-ajax-method="Post"
+          data-ajax-success="Callback">
+
+        <table class="post-form">
+            <tr>
+                <th style="width: 150px;">角色名：</th>
+                <td>
+                    <input id="RoleName" name="RoleName" lay-verify="required" lay-msg="角色名不能为空" class="layui-input" type="text" value="@Model.RoleName">
+                </td>
+            </tr>
+            <tr>
+                <th>说明：</th>
+                <td>
+                    <textarea id="Description" name="Description" class="layui-input">@Model.Description</textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>权限分配：</th>
+                <td>
+                    <div style="width: 300px; height: 300px; overflow: scroll; border: solid 1px #d4d4d4;">
+                        <ul id="TreePermission" class="ztree" style="width: 280px; overflow: auto;"></ul>
+                    </div>
+                    <input type="hidden" id="PermissionIDs" name="PermissionIDs" value="@ViewBag.PermissionIDs" />
+                </td>
+            </tr>
+            <tr>
+                <th></th>
+                <td>
+                    <button id="post_btn" type="submit" class="layui-btn" lay-submit="" lay-filter="post">保 存</button>
+                    <a href="javascript:void(0)" onclick="parent.CloseWindow();" class="layui-btn layui-btn-normal">返回列表</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script src="/lib/zTree_v3/js/jquery.ztree.all.min.js"></script>
+    <script>
+        layui.use(['form'], function () {
+            var form = layui.form;
+
+            //监听提交
+            form.on('submit(post)', function (data) {
+                console.log(JSON.stringify(data.field));
+                return true;
+            });
+        });
+        //ZTree配置
+        var setting = {
+            check: {
+                enable: true
+            },
+            data: {
+                simpleData: {
+                    enable: true
+                }
+            },
+            callback: {
+                onCheck: getAllCheckNodes
+            }
+        };
+
+        $(function () {
+            //ZTree初始化
+            var json = '@Html.Raw( ViewBag.PermissionList)';
+            if (json == '')
+                return;
+            setting.check.chkboxType = { "Y": "p", "N": "s" };//被勾选时[关联父]，取消勾选时[关联子]
+            $.fn.zTree.init($("#TreePermission"), setting, eval(json));
+            var treeObj = $.fn.zTree.getZTreeObj("TreePermission");
+            treeObj.expandAll(true);
+        });
+
+        //获取所有选中的值
+        function getAllCheckNodes() {
+            var treeObj = $.fn.zTree.getZTreeObj('TreePermission'),
+                    nodes = treeObj.getCheckedNodes(true),
+                    v = '';
+            for (var i = 0; i < nodes.length; i++) {
+                if (v != '')
+                    v += ',';
+                v += nodes[i].value;
+            }
+            $('#PermissionIDs').val(v);
+        }
+    </script>
+</body>

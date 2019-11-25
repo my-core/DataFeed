@@ -1,0 +1,59 @@
+﻿
+@model AuthInfo
+
+<body>
+    <form id="UserAdd" class="layui-form layui-form-pane"
+          asp-controller="System" asp-action="AuthAdd"
+          data-ajax="true"
+          data-ajax-mode="replace"
+          data-ajax-update="#"
+          data-ajax-method="Post"
+          data-ajax-success="Callback">
+        <table class="post-form">
+            <tr>
+                <th style="width: 150px;">父节点：</th>
+                <td style="width: 350px;">
+                    @Html.DropDownList("ParentID", ViewData["AuthList"] as SelectList, "-根节点-")
+                </td>
+            </tr>
+            <tr>
+                <th>类别：</th>
+                <td>
+                    @Html.DropDownList("AuthType", ViewData["AuthTypeList"] as SelectList)
+                </td>
+            </tr>
+            <tr>
+                <th>权限名称：</th>
+                <td>
+                    <input id="AuthName" name="AuthName" lay-verify="required" lay-msg="权限名不能为空" class="layui-input" type="text" value="@Model.AuthName">
+                </td>
+            </tr>
+            <tr>
+                <th>权限编码：</th>
+                <td>
+                    <input id="AuthCode" name="AuthCode" lay-verify="required" lay-msg="权限编码不能为空" class="layui-input" type="text" value="@Model.AuthCode">
+                </td>
+            </tr>
+            <tr>
+                <th>URI：</th>
+                <td>
+
+                    @Html.TextBox("Url", Model.Url, new { @class = "layui-input" })
+                </td>
+            </tr>
+            <tr>
+                <th>排序号：</th>
+                <td>
+                    @Html.TextBox("Sort", Model.Sort, new { @class = "layui-input" })
+                </td>
+            </tr>
+            <tr>
+                <th></th>
+                <td>
+                    <button id="post_btn" type="submit" class="layui-btn" lay-submit="" lay-filter="post">保 存</button>
+                    <a href="javascript:void(0)" onclick="parent.CloseWindow();" class="layui-btn layui-btn-normal">返回列表</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>

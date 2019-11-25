@@ -23,7 +23,7 @@ namespace DataFeed.Geography.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             //db connection string
-            string mongoConnString = Configuration.GetConnectionString("MongoDB");
+            //string mongoConnString = Configuration.GetConnectionString("MongoDB");
             string datafeedConnString = Configuration.GetConnectionString("DataFeedDB");
             //repository
             //services.AddSingleton<IGeographyM1ongoRepository>(new GeographyMongoRepository(mongoConnString, "DataFeed"));

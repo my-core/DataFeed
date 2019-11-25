@@ -19,7 +19,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataFeed.Framework.Service"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataFeed.Framework.Enums", "DataFeed.Framework.Enums\DataFeed.Framework.Enums.csproj", "{922668F2-C835-49F0-BFC0-1EEE7AD16286}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataFeed.Finance.FeedMonitor", "DataFeed.Finance.FeedMonitor\DataFeed.Finance.FeedMonitor.csproj", "{66CC9FE6-470D-4336-A7CD-A7D026039770}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataFeed.Finance.FeedMonitor", "DataFeed.Finance.FeedMonitor\DataFeed.Finance.FeedMonitor.csproj", "{66CC9FE6-470D-4336-A7CD-A7D026039770}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataFeed.ManageWeb", "DataFeed.ManageWeb\DataFeed.ManageWeb.csproj", "{E0C19037-9B9F-40C0-86AE-61ED64271797}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataFeed.Framework.Utils", "DataFeed.Framework.Utils\DataFeed.Framework.Utils.csproj", "{7073C0ED-381B-428C-B610-7708CDB8030E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{48FB7B22-2E83-4F1D-83D4-3E06C15052ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +65,18 @@ Global
 		{66CC9FE6-470D-4336-A7CD-A7D026039770}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66CC9FE6-470D-4336-A7CD-A7D026039770}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66CC9FE6-470D-4336-A7CD-A7D026039770}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0C19037-9B9F-40C0-86AE-61ED64271797}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0C19037-9B9F-40C0-86AE-61ED64271797}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0C19037-9B9F-40C0-86AE-61ED64271797}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C19037-9B9F-40C0-86AE-61ED64271797}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7073C0ED-381B-428C-B610-7708CDB8030E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7073C0ED-381B-428C-B610-7708CDB8030E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7073C0ED-381B-428C-B610-7708CDB8030E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7073C0ED-381B-428C-B610-7708CDB8030E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48FB7B22-2E83-4F1D-83D4-3E06C15052ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48FB7B22-2E83-4F1D-83D4-3E06C15052ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48FB7B22-2E83-4F1D-83D4-3E06C15052ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48FB7B22-2E83-4F1D-83D4-3E06C15052ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,6 +86,7 @@ Global
 		{1C47681D-6D09-4F07-9AC8-F2E1080E3561} = {2E445707-B77C-42BB-89F1-6EB9DE437A24}
 		{300AA0AB-CBC4-4E5F-BA60-87351B5A5175} = {2E445707-B77C-42BB-89F1-6EB9DE437A24}
 		{922668F2-C835-49F0-BFC0-1EEE7AD16286} = {2E445707-B77C-42BB-89F1-6EB9DE437A24}
+		{7073C0ED-381B-428C-B610-7708CDB8030E} = {2E445707-B77C-42BB-89F1-6EB9DE437A24}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {269A0436-CD9C-410B-899E-4F952E65B2C5}

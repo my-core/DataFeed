@@ -1,0 +1,19 @@
+﻿
+@{
+    Layout = null;
+    IPagedList pager = (IPagedList)Model;
+    PagerOptions options = new PagerOptions
+    {
+        PageIndex = pager.PageIndex,
+        PageSize = pager.PageSize,
+        TotalRecordCount = pager.TotalRecordCount
+    };
+}
+
+<laypager options="@options" />
+
+@if (pager.TotalRecordCount == 0)
+{
+    <div style="text-align:center; line-height:32px; color:goldenrod;"><i class="layui-icon layui-icon-tips"></i>&nbsp;暂无数据！</div>
+}
+

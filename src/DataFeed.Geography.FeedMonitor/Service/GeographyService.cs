@@ -1,13 +1,13 @@
 ﻿using DataFeed.Geography.FeedMonitor.DataContract;
 using DataFeed.Geography.FeedMonitor.Model.Mongo;
 using DataFeed.Geography.FeedMonitor.Repository.Mongodb;
-using DataFeed.Geography.FeedMonitor.Utils;
 using DataFeed.Framework.Model;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using DataFeed.Framework.Utils;
 
 namespace DataFeed.Geography.FeedMonitor.Service
 {
