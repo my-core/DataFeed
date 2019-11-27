@@ -16,7 +16,7 @@ namespace DataFeed.Framework.Model
         /// <summary>
         /// 省ID
         /// </summary>
-        public int ProvinceID { get; set; }
+        public int ID { get; set; }
         /// <summary>
         /// 省编码
         /// </summary>

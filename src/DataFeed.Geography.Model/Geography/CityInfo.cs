@@ -16,7 +16,7 @@ namespace DataFeed.Framework.Model
         /// <summary>
         /// 城市ID
         /// </summary>
-        public int CityID { get; set; }
+        public int ID { get; set; }
         /// <summary>
         /// 所属省
         /// </summary>
@@ -36,10 +36,6 @@ namespace DataFeed.Framework.Model
         /// <summary>
         /// 首字母
         /// </summary>
-        public string FirstLetter { get; set; }
-        /// <summary>
-        /// 邮编
-        /// </summary>
-        public string ZipCode { get; set; }        
+        public string FirstLetter { get; set; }       
     }
 }

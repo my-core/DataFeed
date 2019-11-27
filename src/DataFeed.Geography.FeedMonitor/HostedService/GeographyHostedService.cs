@@ -28,10 +28,10 @@ namespace DataFeed.Geography.FeedMonitor.Quartz
             _logger.LogInformation("QuartzService start");
 
             //同上国家统计局的省市区镇乡数据
-            _crawler.StartRequest();
+            //_crawler.StartRequest();
 
             //处理数据，清洗抓取的省市区镇乡数据并保存到mysql库
-            //_geographyService.HandleGeographyData();
+            _geographyService.HandleGeographyData();
 
             return Task.CompletedTask;
         }

@@ -28,7 +28,7 @@ namespace DataFeed.Geography.FeedMonitor
                     Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
                     //crawler
                     services.AddSingleton<GeographyCrawler>();
-                    services.AddSingleton(new CrawlOptions { MaxCrawlThread = 10 });
+                    services.AddSingleton(new CrawlOptions { MaxCrawlThread = 20 });
                     //db connection string
                     string mongoConnString = hostContext.Configuration.GetConnectionString("MongoDB");
                     string datafeedConnString = hostContext.Configuration.GetConnectionString("DataFeedDB");

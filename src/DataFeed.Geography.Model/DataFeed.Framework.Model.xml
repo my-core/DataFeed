@@ -79,7 +79,7 @@
             城市信息
             </summary>    
         </member>
-        <member name="P:DataFeed.Framework.Model.CityInfo.CityID">
+        <member name="P:DataFeed.Framework.Model.CityInfo.ID">
             <summary>
             城市ID
             </summary>
@@ -109,17 +109,12 @@
             首字母
             </summary>
         </member>
-        <member name="P:DataFeed.Framework.Model.CityInfo.ZipCode">
-            <summary>
-            邮编
-            </summary>
-        </member>
         <member name="T:DataFeed.Framework.Model.CountyInfo">
             <summary>
             区信息
             </summary>    
         </member>
-        <member name="P:DataFeed.Framework.Model.CountyInfo.CountyID">
+        <member name="P:DataFeed.Framework.Model.CountyInfo.ID">
             <summary>
             区ID
             </summary>
@@ -154,7 +149,7 @@
             省信息
             </summary>    
         </member>
-        <member name="P:DataFeed.Framework.Model.ProvinceInfo.ProvinceID">
+        <member name="P:DataFeed.Framework.Model.ProvinceInfo.ID">
             <summary>
             省ID
             </summary>
@@ -189,7 +184,7 @@
             镇信息
             </summary>    
         </member>
-        <member name="P:DataFeed.Framework.Model.TownInfo.TownID">
+        <member name="P:DataFeed.Framework.Model.TownInfo.ID">
             <summary>
             镇ID
             </summary>
@@ -224,7 +219,7 @@
             乡村信息
             </summary>    
         </member>
-        <member name="P:DataFeed.Framework.Model.VillageInfo.VillageID">
+        <member name="P:DataFeed.Framework.Model.VillageInfo.ID">
             <summary>
             乡村ID
             </summary>

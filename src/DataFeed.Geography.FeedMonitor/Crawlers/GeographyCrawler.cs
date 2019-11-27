@@ -86,7 +86,7 @@ namespace DataFeed.Geography.FeedMonitor.Crawlers
                     metadata.Add("cityName", cityName);
                     url = e.Url.Substring(0, e.Url.LastIndexOf("/") + 1) + url;
                     //特殊处理
-                    if (cityName == "东莞市" || cityName == "中山市")
+                    if (cityName == "东莞市" || cityName == "中山市" || cityName== "儋州市")
                     {
                         metadata.Add("countyCode", cityCode + "00");
                         metadata.Add("countyName", "市辖区");

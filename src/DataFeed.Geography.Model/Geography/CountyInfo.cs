@@ -16,7 +16,7 @@ namespace DataFeed.Framework.Model
         /// <summary>
         /// 区ID
         /// </summary>
-        public int CountyID { get; set; }
+        public int ID { get; set; }
         /// <summary>
         /// 所属城市编码
         /// </summary>

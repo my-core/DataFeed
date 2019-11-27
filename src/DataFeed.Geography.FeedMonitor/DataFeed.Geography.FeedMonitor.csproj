@@ -45,4 +45,6 @@
     <ProjectReference Include="..\DataFeed.Geography.Model\DataFeed.Framework.Model.csproj" />
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1development_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
 </Project>

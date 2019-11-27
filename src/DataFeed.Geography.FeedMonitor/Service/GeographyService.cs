@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using DataFeed.Framework.Utils;
+using System.Threading;
+using System.Diagnostics;
 
 namespace DataFeed.Geography.FeedMonitor.Service
 {
@@ -16,11 +18,55 @@ namespace DataFeed.Geography.FeedMonitor.Service
         private ILogger<GeographyService> _logger;
         private IGeographyMongoRepository _geographyMongoRepository;
         private IGeographyRepository _geographyRepository;
+
+        /// <summary>
+        /// 线程组
+        /// </summary>
+        private Thread[] countyThreads;
+        private Thread[] townThreads;
+        private Thread[] villageThreads;
+        /// <summary>
+        /// 队列
+        /// </summary>
+        private Stack<List<CountyInfo>> countyQueue = new Stack<List<CountyInfo>>();
+        private Stack<List<TownInfo>> townQueue = new Stack<List<TownInfo>>();
+        private Stack<List<VillageInfo>> villageQueue = new Stack<List<VillageInfo>>();
+        /// <summary>
+        /// ctor
+        /// </summary>
+        /// <param name="logger"></param>
+        /// <param name="geographyMongoRepository"></param>
+        /// <param name="geographyRepository"></param>
         public GeographyService(ILogger<GeographyService> logger, IGeographyMongoRepository geographyMongoRepository, IGeographyRepository geographyRepository)
         {
             _logger = logger;
             _geographyMongoRepository = geographyMongoRepository;
             _geographyRepository = geographyRepository;
+
+            countyThreads = new Thread[15];
+            for (int i = 0; i < 15; i++)
+            {
+                Thread crawlThread = new Thread(DoWork_County);
+                crawlThread.Name = i.ToString();
+                crawlThread.Start();
+                countyThreads[i] = crawlThread;
+            }
+            townThreads = new Thread[20];
+            for (int i = 0; i < 20; i++)
+            {
+                Thread crawlThread = new Thread(DoWork_Town);
+                crawlThread.Name = i.ToString();
+                crawlThread.Start();
+                townThreads[i] = crawlThread;
+            }
+            villageThreads = new Thread[30];
+            for (int i = 0; i < 30; i++)
+            {
+                Thread crawlThread = new Thread(DoWork_Village);
+                crawlThread.Name = i.ToString();
+                crawlThread.Start();
+                villageThreads[i] = crawlThread;
+            }
         }
 
         /// <summary>
@@ -52,7 +98,11 @@ namespace DataFeed.Geography.FeedMonitor.Service
         /// </summary>
         private void HandleProvinceData()
         {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
             var result = _geographyMongoRepository.GetProvinceList();
+            stopwatch.Stop();
+            //_logger.LogWarning("GetProvinceList->{0}ms",stopwatch.ElapsedMilliseconds);
             List<ProvinceInfo> list = new List<ProvinceInfo>();
             result.ForEach(item =>
             {
@@ -76,7 +126,12 @@ namespace DataFeed.Geography.FeedMonitor.Service
         /// </summary>
         private void HandleCityData(string provinceCode)
         {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
             List<CityVo> result = _geographyMongoRepository.GetCityList(provinceCode);
+            stopwatch.Stop();
+            //_logger.LogWarning("GetCityList->{0}ms", stopwatch.ElapsedMilliseconds);
+            
             List<CityInfo> list = new List<CityInfo>();
             result.ForEach(item =>
             {
@@ -100,7 +155,12 @@ namespace DataFeed.Geography.FeedMonitor.Service
         /// </summary>
         private void HandleCountyData(string cityCode)
         {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
             List<CountyVo> result = _geographyMongoRepository.GetCountyList(cityCode);
+            stopwatch.Stop();
+            //_logger.LogWarning("GetCountyList->{0}ms", stopwatch.ElapsedMilliseconds);
+            
             List<CountyInfo> list = new List<CountyInfo>();
             result.ForEach(item =>
             {
@@ -116,7 +176,8 @@ namespace DataFeed.Geography.FeedMonitor.Service
                 HandleTownData(item.CountyCode);
             });
             if (list.Count > 0)
-                _geographyRepository.Insert(list);
+                countyQueue.Push(list);
+                //_geographyRepository.Insert(list);
         }
 
         /// <summary>
@@ -124,7 +185,12 @@ namespace DataFeed.Geography.FeedMonitor.Service
         /// </summary>
         private void HandleTownData(string countyCode)
         {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
             List<TownVo> result = _geographyMongoRepository.GetTownList(countyCode);
+            stopwatch.Stop();
+            //_logger.LogWarning("GetTownList->{0}ms", stopwatch.ElapsedMilliseconds);
+            
             List<TownInfo> list = new List<TownInfo>();
             result.ForEach(item =>
             {
@@ -140,7 +206,8 @@ namespace DataFeed.Geography.FeedMonitor.Service
                 HandleVillageData(item.TownCode);
             });
             if (list.Count > 0)
-                _geographyRepository.Insert(list);
+                townQueue.Push(list);
+                //_geographyRepository.Insert(list);
         }
 
         /// <summary>
@@ -148,7 +215,12 @@ namespace DataFeed.Geography.FeedMonitor.Service
         /// </summary>
         private void HandleVillageData(string townCode)
         {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
             List<VillageVo> result = _geographyMongoRepository.GetVillageList(townCode);
+            stopwatch.Stop();
+            //_logger.LogWarning("GetVillageList->{0}ms", stopwatch.ElapsedMilliseconds);
+            
             List<VillageInfo> list = new List<VillageInfo>();
             result.ForEach(item =>
             {
@@ -163,7 +235,126 @@ namespace DataFeed.Geography.FeedMonitor.Service
                 });
             });
             if (list.Count > 0)
-                _geographyRepository.Insert(list);
+                villageQueue.Push(list);
+                //_geographyRepository.Insert(list);
+        }
+
+        /// <summary>
+        /// 开始线程
+        /// </summary>
+        /// <param name="data"></param>
+        private void DoWork_Village()
+        {
+            try
+            {
+                while (true)
+                {                    
+                    List<VillageInfo> list = null;
+                    lock (villageQueue)
+                    {
+                        if (villageQueue.Count == 0)
+                        {
+                            //Thread.Sleep(TimeSpan.FromSeconds(1));
+                            continue;
+                        }
+                        list = villageQueue.Pop();
+                    }
+                    if (list == null)
+                    {
+                        //Thread.Sleep(TimeSpan.FromSeconds(1));
+                        continue;
+                    }
+                    Stopwatch stopwatch = new Stopwatch();
+                    stopwatch.Start();
+                    _geographyRepository.Insert(list);
+                    stopwatch.Stop();
+                    _logger.LogWarning("InsertVillageList->{0}ms", stopwatch.ElapsedMilliseconds);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"DoWork failed");
+                // 线程被放弃
+            }
+        }
+        /// <summary>
+        /// 开始线程
+        /// </summary>
+        /// <param name="data"></param>
+        private void DoWork_Town()
+        {
+            try
+            {
+                while (true)
+                {
+                    List<TownInfo> list = null;
+                    lock (townQueue)
+                    {
+                        if (townQueue.Count == 0)
+                        {
+                            //Thread.Sleep(TimeSpan.FromSeconds(1));
+                            continue;
+                        }
+                        list = townQueue.Pop();
+                    }
+                    if (list == null)
+                    {
+                        //Thread.Sleep(TimeSpan.FromSeconds(1));
+                        continue;
+                    }
+
+                    Stopwatch stopwatch = new Stopwatch();
+                    stopwatch.Start();
+                    _geographyRepository.Insert(list);
+                    stopwatch.Stop();
+                    _logger.LogWarning("InsertTownList->{0}ms", stopwatch.ElapsedMilliseconds);
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"DoWork failed");
+                // 线程被放弃
+            }
+        }
+
+        /// <summary>
+        /// 开始线程
+        /// </summary>
+        /// <param name="data"></param>
+        private void DoWork_County()
+        {
+            try
+            {
+                while (true)
+                {
+                    List<CountyInfo> list = null;
+                    lock (countyQueue)
+                    {
+                        if (countyQueue.Count == 0)
+                        {
+                            //Thread.Sleep(TimeSpan.FromSeconds(1));
+                            continue;
+                        }
+                        list = countyQueue.Pop();
+                    }
+                    if (list == null)
+                    {
+                        //Thread.Sleep(TimeSpan.FromSeconds(1));
+                        continue;
+                    }
+                    Stopwatch stopwatch = new Stopwatch();
+                    stopwatch.Start();
+                    _geographyRepository.Insert(list);
+                    stopwatch.Stop();
+                    _logger.LogWarning("InsertCountyList->{0}ms", stopwatch.ElapsedMilliseconds);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"DoWork failed");
+                // 线程被放弃
+            }
         }
 
         /// <summary>

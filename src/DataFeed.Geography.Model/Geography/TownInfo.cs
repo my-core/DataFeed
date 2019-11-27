@@ -16,7 +16,7 @@ namespace DataFeed.Framework.Model
         /// <summary>
         /// 镇ID
         /// </summary>
-        public int TownID { get; set; }
+        public int ID { get; set; }
         /// <summary>
         /// 区编码
         /// </summary>
