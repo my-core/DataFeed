@@ -4642,8 +4642,8 @@
     },
     "DataFeed.Framework.Model/1.0.0": {
       "type": "project",
-      "path": "../DataFeed.Geography.Model/DataFeed.Framework.Model.csproj",
-      "msbuildProject": "../DataFeed.Geography.Model/DataFeed.Framework.Model.csproj"
+      "path": "../DataFeed.Framework.Model/DataFeed.Framework.Model.csproj",
+      "msbuildProject": "../DataFeed.Framework.Model/DataFeed.Framework.Model.csproj"
     },
     "DataFeed.Framework.Repository/1.0.0": {
       "type": "project",
@@ -4703,6 +4703,9 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
+            "E:\\test\\DataFeed\\src\\DataFeed.Framework.Model\\DataFeed.Framework.Model.csproj": {
+              "projectPath": "E:\\test\\DataFeed\\src\\DataFeed.Framework.Model\\DataFeed.Framework.Model.csproj"
+            },
             "E:\\test\\DataFeed\\src\\DataFeed.Framework.Repository\\DataFeed.Framework.Repository.csproj": {
               "projectPath": "E:\\test\\DataFeed\\src\\DataFeed.Framework.Repository\\DataFeed.Framework.Repository.csproj"
             },
@@ -4711,9 +4714,6 @@
             },
             "E:\\test\\DataFeed\\src\\DataFeed.Framework.Utils\\DataFeed.Framework.Utils.csproj": {
               "projectPath": "E:\\test\\DataFeed\\src\\DataFeed.Framework.Utils\\DataFeed.Framework.Utils.csproj"
-            },
-            "E:\\test\\DataFeed\\src\\DataFeed.Geography.Model\\DataFeed.Framework.Model.csproj": {
-              "projectPath": "E:\\test\\DataFeed\\src\\DataFeed.Geography.Model\\DataFeed.Framework.Model.csproj"
             }
           }
         }

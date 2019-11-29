@@ -4,6 +4,68 @@
     "E:\\test\\DataFeed\\src\\DataFeed.ManageWeb\\DataFeed.ManageWeb.csproj": {}
   },
   "projects": {
+    "E:\\test\\DataFeed\\src\\DataFeed.Framework.Model\\DataFeed.Framework.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\test\\DataFeed\\src\\DataFeed.Framework.Model\\DataFeed.Framework.Model.csproj",
+        "projectName": "DataFeed.Framework.Model",
+        "projectPath": "E:\\test\\DataFeed\\src\\DataFeed.Framework.Model\\DataFeed.Framework.Model.csproj",
+        "packagesPath": "C:\\Users\\XUNZHI\\.nuget\\packages\\",
+        "outputPath": "E:\\test\\DataFeed\\src\\DataFeed.Framework.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\XUNZHI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://localhost:8081/repository/nuget-hosted/": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "FastNet.Framework.Dapper": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "E:\\test\\DataFeed\\src\\DataFeed.Framework.Repository\\DataFeed.Framework.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -197,68 +259,6 @@
         }
       }
     },
-    "E:\\test\\DataFeed\\src\\DataFeed.Geography.Model\\DataFeed.Framework.Model.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "E:\\test\\DataFeed\\src\\DataFeed.Geography.Model\\DataFeed.Framework.Model.csproj",
-        "projectName": "DataFeed.Framework.Model",
-        "projectPath": "E:\\test\\DataFeed\\src\\DataFeed.Geography.Model\\DataFeed.Framework.Model.csproj",
-        "packagesPath": "C:\\Users\\XUNZHI\\.nuget\\packages\\",
-        "outputPath": "E:\\test\\DataFeed\\src\\DataFeed.Geography.Model\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\XUNZHI\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netstandard2.1"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://localhost:8081/repository/nuget-hosted/": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netstandard2.1": {
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netstandard2.1": {
-          "dependencies": {
-            "FastNet.Framework.Dapper": {
-              "target": "Package",
-              "version": "[1.0.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "NETStandard.Library": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
     "E:\\test\\DataFeed\\src\\DataFeed.ManageWeb\\DataFeed.ManageWeb.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -286,6 +286,9 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
+              "E:\\test\\DataFeed\\src\\DataFeed.Framework.Model\\DataFeed.Framework.Model.csproj": {
+                "projectPath": "E:\\test\\DataFeed\\src\\DataFeed.Framework.Model\\DataFeed.Framework.Model.csproj"
+              },
               "E:\\test\\DataFeed\\src\\DataFeed.Framework.Repository\\DataFeed.Framework.Repository.csproj": {
                 "projectPath": "E:\\test\\DataFeed\\src\\DataFeed.Framework.Repository\\DataFeed.Framework.Repository.csproj"
               },
@@ -294,9 +297,6 @@
               },
               "E:\\test\\DataFeed\\src\\DataFeed.Framework.Utils\\DataFeed.Framework.Utils.csproj": {
                 "projectPath": "E:\\test\\DataFeed\\src\\DataFeed.Framework.Utils\\DataFeed.Framework.Utils.csproj"
-              },
-              "E:\\test\\DataFeed\\src\\DataFeed.Geography.Model\\DataFeed.Framework.Model.csproj": {
-                "projectPath": "E:\\test\\DataFeed\\src\\DataFeed.Geography.Model\\DataFeed.Framework.Model.csproj"
               }
             }
           }

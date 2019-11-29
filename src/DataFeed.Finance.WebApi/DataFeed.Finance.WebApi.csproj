@@ -17,9 +17,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DataFeed.Framework.Enums\DataFeed.Framework.Enums.csproj" />
+    <ProjectReference Include="..\DataFeed.Framework.Model\DataFeed.Framework.Model.csproj" />
     <ProjectReference Include="..\DataFeed.Framework.Repository\DataFeed.Framework.Repository.csproj" />
     <ProjectReference Include="..\DataFeed.Framework.Service\DataFeed.Framework.Service.csproj" />
-    <ProjectReference Include="..\DataFeed.Geography.Model\DataFeed.Framework.Model.csproj" />
   </ItemGroup>
 
 </Project>
