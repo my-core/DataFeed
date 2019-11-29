@@ -1,0 +1,89 @@
+﻿@model PagedList<GetStockListResponse>
+@{
+    ViewBag.Title = "股票列表";
+}
+
+<div class="container">
+    @using (Html.BeginForm("StockList", "Finance", FormMethod.Get, new { @class = "layui-form search-form layui-elem-quote", @id = "searchForm" }))
+    {
+        <table>
+            <tr>
+                <th>股票代码：</th>
+                <td>
+                    <input id="StockCode" name="StockCode" class="layui-input" type="text">
+                </td>
+                <th>股票名称：</th>
+                <td>
+                    <input id="StockName" name="StockName" class="layui-input" type="text">
+                </td>
+                <td>
+                    <select id="MarketType" name="MarketType">
+                        <option value="1">上交所</option>
+                        <option value="2">深交所</option>
+                        <option value="3">港交所</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="MarketType" name="MarketType">
+                        <option value="1">A股</option>
+                        <option value="2">B股</option>
+                        <option value="3">科创板</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="submit" class="layui-btn layui-btn-sm" value="查 询" />
+                </td>
+            </tr>
+        </table>
+    }
+    <div style="padding:0px 10px;">
+        <a class="layui-btn layui-btn-sm layui-btn-normal" href="javascript:void(0);" onclick="AddOrEdit()">
+            <i class="layui-icon layui-icon-tianjia2"></i>添加股票
+        </a>
+    </div>
+    <table class="layui-table" id="list">
+        <thead>
+            <tr>
+                <th style="text-align:center;">#</th>
+                <th>内部ID</th>
+                <th>股票代码</th>
+                <th>股票名称</th>
+                <th>市场</th>
+                <th>子市场</th>
+                <th>上市时间</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{ int index = 1;}
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td style="width:20px; text-align:center;">@(index++)</td>
+                    <td>@item.ID</td>
+                    <td>@item.StockCode</td>
+                    <td>@item.StockName</td>
+                    <td>@item.MarketName</td>
+                    <td>@item.SubMarketName</td>
+                    <td>@item.MarktTime.ToShortDateString()</td>
+                    <td>
+                        <a class="layui-btn layui-btn-normal layui-btn-xs" onclick="AddOrEdit('@item.ID')"><i class="layui-icon layui-icon-bianji"></i>编辑</a>
+                        <a class="layui-btn layui-btn-danger layui-btn-xs" onclick="javascript:Delete('/Finance/StockDelete/@item.ID');"><i class="layui-icon layui-icon-delete"></i>删除</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @Html.PartialAsync("_Pager", Model).Result
+</div>
+<script>
+    function AddOrEdit(id) {
+        if (id == undefined) {
+            ShowMaxWindow('===添加股票信息===', '/Finance/StockAdd');
+        }
+        else {
+            ShowMaxWindow('===编辑股票信息===', '/Finance/StockAdd/' + id);
+        }
+    }
+
+</script>
