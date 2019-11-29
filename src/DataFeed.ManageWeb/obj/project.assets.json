@@ -1195,6 +1195,16 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
+      "DataFeed.Framework.Enums/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/DataFeed.Framework.Enums.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataFeed.Framework.Enums.dll": {}
+        }
+      },
       "DataFeed.Framework.Model/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -4640,6 +4650,11 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
+    "DataFeed.Framework.Enums/1.0.0": {
+      "type": "project",
+      "path": "../DataFeed.Framework.Enums/DataFeed.Framework.Enums.csproj",
+      "msbuildProject": "../DataFeed.Framework.Enums/DataFeed.Framework.Enums.csproj"
+    },
     "DataFeed.Framework.Model/1.0.0": {
       "type": "project",
       "path": "../DataFeed.Framework.Model/DataFeed.Framework.Model.csproj",
@@ -4663,6 +4678,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
+      "DataFeed.Framework.Enums >= 1.0.0",
       "DataFeed.Framework.Model >= 1.0.0",
       "DataFeed.Framework.Repository >= 1.0.0",
       "DataFeed.Framework.Service >= 1.0.0",
@@ -4703,6 +4719,9 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
+            "E:\\test\\DataFeed\\src\\DataFeed.Framework.Enums\\DataFeed.Framework.Enums.csproj": {
+              "projectPath": "E:\\test\\DataFeed\\src\\DataFeed.Framework.Enums\\DataFeed.Framework.Enums.csproj"
+            },
             "E:\\test\\DataFeed\\src\\DataFeed.Framework.Model\\DataFeed.Framework.Model.csproj": {
               "projectPath": "E:\\test\\DataFeed\\src\\DataFeed.Framework.Model\\DataFeed.Framework.Model.csproj"
             },

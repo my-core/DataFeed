@@ -16,7 +16,7 @@ namespace DataFeed.Finance.WebApi
         public MapperProfile()
         {
             // Add as many of these lines as you need to map your objects
-            CreateMap<StockCodeInfo, GetStockCodeResponse>().ReverseMap();
+            CreateMap<StockInfo, GetStockCodeResponse>().ReverseMap();
         }
     }
 }

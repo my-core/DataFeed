@@ -158,3 +158,7 @@ E:\test\DataFeed\src\DataFeed.ManageWeb\obj\Debug\netcoreapp3.0\DataFeed.ManageW
 E:\test\DataFeed\src\DataFeed.ManageWeb\obj\Debug\netcoreapp3.0\DataFeed.ManageWeb.csproj.CopyComplete
 E:\test\DataFeed\src\DataFeed.ManageWeb\obj\Debug\netcoreapp3.0\DataFeed.ManageWeb.dll
 E:\test\DataFeed\src\DataFeed.ManageWeb\obj\Debug\netcoreapp3.0\DataFeed.ManageWeb.pdb
+E:\test\DataFeed\src\DataFeed.ManageWeb\bin\Debug\netcoreapp3.0\DataFeed.Framework.Enums.dll
+E:\test\DataFeed\src\DataFeed.ManageWeb\bin\Debug\netcoreapp3.0\DataFeed.Framework.Enums.pdb
+E:\test\DataFeed\src\DataFeed.ManageWeb\obj\Debug\netcoreapp3.0\Razor\Views\Finance\StockAdd.cshtml.g.cs
+E:\test\DataFeed\src\DataFeed.ManageWeb\obj\Debug\netcoreapp3.0\Razor\Views\Finance\StockList.cshtml.g.cs

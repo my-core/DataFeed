@@ -8,13 +8,13 @@ namespace DataFeed.Framework.Model
     /// <summary>
     /// 股票代码
     /// </summary>
-    [Table("finance_stockcode")]
-    public class StockCodeInfo
+    [Table("finance_stocks")]
+    public class StockInfo
     {
         /// <summary>
         /// 股票ID
         /// </summary>
-        public int StockID { get; set; }
+        public int ID { get; set; }
         /// <summary>
         /// 股票代码
         /// </summary>
@@ -26,11 +26,11 @@ namespace DataFeed.Framework.Model
         /// <summary>
         /// 市场类型
         /// </summary>
-        public string MarketType { get; set; }
+        public int MarketType { get; set; }
         /// <summary>
         /// 市场子类型
         /// </summary>
-        public string SubMarketType { get; set; }
+        public int SubMarketType { get; set; }
         /// <summary>
         /// 上市时间
         /// </summary>

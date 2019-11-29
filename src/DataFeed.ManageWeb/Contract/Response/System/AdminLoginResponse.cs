@@ -14,7 +14,7 @@ namespace DataFeed.ManageWeb.Contract.Response
         /// <summary>
         /// 登录信息
         /// </summary>
-        public AdminInfo LoginAdminInfo { get; set; }
+        public AdminInfo AdminInfo { get; set; }
         /// <summary>
         /// 权限
         /// </summary>
