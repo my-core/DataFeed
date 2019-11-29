@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "F:\\学习Demo\\DataFeed\\src\\DataFeed.ManageWeb\\DataFeed.ManageWeb.csproj": {}
+    "E:\\test\\DataFeed\\src\\DataFeed.ManageWeb\\DataFeed.ManageWeb.csproj": {}
   },
   "projects": {
-    "F:\\学习Demo\\DataFeed\\src\\DataFeed.Framework.Repository\\DataFeed.Framework.Repository.csproj": {
+    "E:\\test\\DataFeed\\src\\DataFeed.Framework.Repository\\DataFeed.Framework.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\学习Demo\\DataFeed\\src\\DataFeed.Framework.Repository\\DataFeed.Framework.Repository.csproj",
+        "projectUniqueName": "E:\\test\\DataFeed\\src\\DataFeed.Framework.Repository\\DataFeed.Framework.Repository.csproj",
         "projectName": "DataFeed.Framework.Repository",
-        "projectPath": "F:\\学习Demo\\DataFeed\\src\\DataFeed.Framework.Repository\\DataFeed.Framework.Repository.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "F:\\学习Demo\\DataFeed\\src\\DataFeed.Framework.Repository\\obj\\",
+        "projectPath": "E:\\test\\DataFeed\\src\\DataFeed.Framework.Repository\\DataFeed.Framework.Repository.csproj",
+        "packagesPath": "C:\\Users\\XUNZHI\\.nuget\\packages\\",
+        "outputPath": "E:\\test\\DataFeed\\src\\DataFeed.Framework.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\XUNZHI\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,6 +25,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://localhost:8081/repository/nuget-hosted/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -74,20 +75,20 @@
         }
       }
     },
-    "F:\\学习Demo\\DataFeed\\src\\DataFeed.Framework.Service\\DataFeed.Framework.Service.csproj": {
+    "E:\\test\\DataFeed\\src\\DataFeed.Framework.Service\\DataFeed.Framework.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\学习Demo\\DataFeed\\src\\DataFeed.Framework.Service\\DataFeed.Framework.Service.csproj",
+        "projectUniqueName": "E:\\test\\DataFeed\\src\\DataFeed.Framework.Service\\DataFeed.Framework.Service.csproj",
         "projectName": "DataFeed.Framework.Service",
-        "projectPath": "F:\\学习Demo\\DataFeed\\src\\DataFeed.Framework.Service\\DataFeed.Framework.Service.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "F:\\学习Demo\\DataFeed\\src\\DataFeed.Framework.Service\\obj\\",
+        "projectPath": "E:\\test\\DataFeed\\src\\DataFeed.Framework.Service\\DataFeed.Framework.Service.csproj",
+        "packagesPath": "C:\\Users\\XUNZHI\\.nuget\\packages\\",
+        "outputPath": "E:\\test\\DataFeed\\src\\DataFeed.Framework.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\XUNZHI\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -95,6 +96,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://localhost:8081/repository/nuget-hosted/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -136,20 +138,20 @@
         }
       }
     },
-    "F:\\学习Demo\\DataFeed\\src\\DataFeed.Framework.Utils\\DataFeed.Framework.Utils.csproj": {
+    "E:\\test\\DataFeed\\src\\DataFeed.Framework.Utils\\DataFeed.Framework.Utils.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\学习Demo\\DataFeed\\src\\DataFeed.Framework.Utils\\DataFeed.Framework.Utils.csproj",
+        "projectUniqueName": "E:\\test\\DataFeed\\src\\DataFeed.Framework.Utils\\DataFeed.Framework.Utils.csproj",
         "projectName": "DataFeed.Framework.Utils",
-        "projectPath": "F:\\学习Demo\\DataFeed\\src\\DataFeed.Framework.Utils\\DataFeed.Framework.Utils.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "F:\\学习Demo\\DataFeed\\src\\DataFeed.Framework.Utils\\obj\\",
+        "projectPath": "E:\\test\\DataFeed\\src\\DataFeed.Framework.Utils\\DataFeed.Framework.Utils.csproj",
+        "packagesPath": "C:\\Users\\XUNZHI\\.nuget\\packages\\",
+        "outputPath": "E:\\test\\DataFeed\\src\\DataFeed.Framework.Utils\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\XUNZHI\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -157,6 +159,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://localhost:8081/repository/nuget-hosted/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -194,20 +197,20 @@
         }
       }
     },
-    "F:\\学习Demo\\DataFeed\\src\\DataFeed.Geography.Model\\DataFeed.Framework.Model.csproj": {
+    "E:\\test\\DataFeed\\src\\DataFeed.Geography.Model\\DataFeed.Framework.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\学习Demo\\DataFeed\\src\\DataFeed.Geography.Model\\DataFeed.Framework.Model.csproj",
+        "projectUniqueName": "E:\\test\\DataFeed\\src\\DataFeed.Geography.Model\\DataFeed.Framework.Model.csproj",
         "projectName": "DataFeed.Framework.Model",
-        "projectPath": "F:\\学习Demo\\DataFeed\\src\\DataFeed.Geography.Model\\DataFeed.Framework.Model.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "F:\\学习Demo\\DataFeed\\src\\DataFeed.Geography.Model\\obj\\",
+        "projectPath": "E:\\test\\DataFeed\\src\\DataFeed.Geography.Model\\DataFeed.Framework.Model.csproj",
+        "packagesPath": "C:\\Users\\XUNZHI\\.nuget\\packages\\",
+        "outputPath": "E:\\test\\DataFeed\\src\\DataFeed.Geography.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\XUNZHI\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -215,6 +218,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://localhost:8081/repository/nuget-hosted/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -255,20 +259,20 @@
         }
       }
     },
-    "F:\\学习Demo\\DataFeed\\src\\DataFeed.ManageWeb\\DataFeed.ManageWeb.csproj": {
+    "E:\\test\\DataFeed\\src\\DataFeed.ManageWeb\\DataFeed.ManageWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\学习Demo\\DataFeed\\src\\DataFeed.ManageWeb\\DataFeed.ManageWeb.csproj",
+        "projectUniqueName": "E:\\test\\DataFeed\\src\\DataFeed.ManageWeb\\DataFeed.ManageWeb.csproj",
         "projectName": "DataFeed.ManageWeb",
-        "projectPath": "F:\\学习Demo\\DataFeed\\src\\DataFeed.ManageWeb\\DataFeed.ManageWeb.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "F:\\学习Demo\\DataFeed\\src\\DataFeed.ManageWeb\\obj\\",
+        "projectPath": "E:\\test\\DataFeed\\src\\DataFeed.ManageWeb\\DataFeed.ManageWeb.csproj",
+        "packagesPath": "C:\\Users\\XUNZHI\\.nuget\\packages\\",
+        "outputPath": "E:\\test\\DataFeed\\src\\DataFeed.ManageWeb\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\XUNZHI\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -276,22 +280,23 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://localhost:8081/repository/nuget-hosted/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "F:\\学习Demo\\DataFeed\\src\\DataFeed.Framework.Repository\\DataFeed.Framework.Repository.csproj": {
-                "projectPath": "F:\\学习Demo\\DataFeed\\src\\DataFeed.Framework.Repository\\DataFeed.Framework.Repository.csproj"
+              "E:\\test\\DataFeed\\src\\DataFeed.Framework.Repository\\DataFeed.Framework.Repository.csproj": {
+                "projectPath": "E:\\test\\DataFeed\\src\\DataFeed.Framework.Repository\\DataFeed.Framework.Repository.csproj"
               },
-              "F:\\学习Demo\\DataFeed\\src\\DataFeed.Framework.Service\\DataFeed.Framework.Service.csproj": {
-                "projectPath": "F:\\学习Demo\\DataFeed\\src\\DataFeed.Framework.Service\\DataFeed.Framework.Service.csproj"
+              "E:\\test\\DataFeed\\src\\DataFeed.Framework.Service\\DataFeed.Framework.Service.csproj": {
+                "projectPath": "E:\\test\\DataFeed\\src\\DataFeed.Framework.Service\\DataFeed.Framework.Service.csproj"
               },
-              "F:\\学习Demo\\DataFeed\\src\\DataFeed.Framework.Utils\\DataFeed.Framework.Utils.csproj": {
-                "projectPath": "F:\\学习Demo\\DataFeed\\src\\DataFeed.Framework.Utils\\DataFeed.Framework.Utils.csproj"
+              "E:\\test\\DataFeed\\src\\DataFeed.Framework.Utils\\DataFeed.Framework.Utils.csproj": {
+                "projectPath": "E:\\test\\DataFeed\\src\\DataFeed.Framework.Utils\\DataFeed.Framework.Utils.csproj"
               },
-              "F:\\学习Demo\\DataFeed\\src\\DataFeed.Geography.Model\\DataFeed.Framework.Model.csproj": {
-                "projectPath": "F:\\学习Demo\\DataFeed\\src\\DataFeed.Geography.Model\\DataFeed.Framework.Model.csproj"
+              "E:\\test\\DataFeed\\src\\DataFeed.Geography.Model\\DataFeed.Framework.Model.csproj": {
+                "projectPath": "E:\\test\\DataFeed\\src\\DataFeed.Geography.Model\\DataFeed.Framework.Model.csproj"
               }
             }
           }
@@ -308,6 +313,10 @@
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[3.0.0, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[4.9.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

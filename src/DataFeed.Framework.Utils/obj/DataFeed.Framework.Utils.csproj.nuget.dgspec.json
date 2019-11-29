@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "F:\\学习Demo\\DataFeed\\src\\DataFeed.Framework.Utils\\DataFeed.Framework.Utils.csproj": {}
+    "E:\\test\\DataFeed\\src\\DataFeed.Framework.Utils\\DataFeed.Framework.Utils.csproj": {}
   },
   "projects": {
-    "F:\\学习Demo\\DataFeed\\src\\DataFeed.Framework.Utils\\DataFeed.Framework.Utils.csproj": {
+    "E:\\test\\DataFeed\\src\\DataFeed.Framework.Utils\\DataFeed.Framework.Utils.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\学习Demo\\DataFeed\\src\\DataFeed.Framework.Utils\\DataFeed.Framework.Utils.csproj",
+        "projectUniqueName": "E:\\test\\DataFeed\\src\\DataFeed.Framework.Utils\\DataFeed.Framework.Utils.csproj",
         "projectName": "DataFeed.Framework.Utils",
-        "projectPath": "F:\\学习Demo\\DataFeed\\src\\DataFeed.Framework.Utils\\DataFeed.Framework.Utils.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "F:\\学习Demo\\DataFeed\\src\\DataFeed.Framework.Utils\\obj\\",
+        "projectPath": "E:\\test\\DataFeed\\src\\DataFeed.Framework.Utils\\DataFeed.Framework.Utils.csproj",
+        "packagesPath": "C:\\Users\\XUNZHI\\.nuget\\packages\\",
+        "outputPath": "E:\\test\\DataFeed\\src\\DataFeed.Framework.Utils\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\XUNZHI\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,6 +25,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://localhost:8081/repository/nuget-hosted/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

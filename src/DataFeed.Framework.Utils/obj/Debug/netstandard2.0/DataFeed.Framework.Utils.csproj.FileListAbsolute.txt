@@ -6,3 +6,11 @@ F:\学习Demo\DataFeed\src\DataFeed.Framework.Utils\obj\Debug\netstandard2.0\Dat
 F:\学习Demo\DataFeed\src\DataFeed.Framework.Utils\obj\Debug\netstandard2.0\DataFeed.Framework.Utils.AssemblyInfo.cs
 F:\学习Demo\DataFeed\src\DataFeed.Framework.Utils\obj\Debug\netstandard2.0\DataFeed.Framework.Utils.dll
 F:\学习Demo\DataFeed\src\DataFeed.Framework.Utils\obj\Debug\netstandard2.0\DataFeed.Framework.Utils.pdb
+E:\test\DataFeed\src\DataFeed.Framework.Utils\bin\Debug\netstandard2.0\DataFeed.Framework.Utils.deps.json
+E:\test\DataFeed\src\DataFeed.Framework.Utils\bin\Debug\netstandard2.0\DataFeed.Framework.Utils.dll
+E:\test\DataFeed\src\DataFeed.Framework.Utils\bin\Debug\netstandard2.0\DataFeed.Framework.Utils.pdb
+E:\test\DataFeed\src\DataFeed.Framework.Utils\obj\Debug\netstandard2.0\DataFeed.Framework.Utils.csprojAssemblyReference.cache
+E:\test\DataFeed\src\DataFeed.Framework.Utils\obj\Debug\netstandard2.0\DataFeed.Framework.Utils.AssemblyInfoInputs.cache
+E:\test\DataFeed\src\DataFeed.Framework.Utils\obj\Debug\netstandard2.0\DataFeed.Framework.Utils.AssemblyInfo.cs
+E:\test\DataFeed\src\DataFeed.Framework.Utils\obj\Debug\netstandard2.0\DataFeed.Framework.Utils.dll
+E:\test\DataFeed\src\DataFeed.Framework.Utils\obj\Debug\netstandard2.0\DataFeed.Framework.Utils.pdb

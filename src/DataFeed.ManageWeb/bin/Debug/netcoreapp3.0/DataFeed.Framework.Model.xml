@@ -109,11 +109,6 @@
             首字母
             </summary>
         </member>
-        <member name="P:DataFeed.Framework.Model.CityInfo.ZipCode">
-            <summary>
-            邮编
-            </summary>
-        </member>
         <member name="T:DataFeed.Framework.Model.CountyInfo">
             <summary>
             区信息

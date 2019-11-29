@@ -5,12 +5,8 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>F:\学习Demo\DataFeed\src\DataFeed.Geography.WebApi\DataFeed.Geography.WebApi.xml</DocumentationFile>
+    <DocumentationFile></DocumentationFile>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="DataFeed.Geography.WebApi.xml" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
@@ -23,12 +19,6 @@
     <ProjectReference Include="..\DataFeed.Framework.Repository\DataFeed.Framework.Repository.csproj" />
     <ProjectReference Include="..\DataFeed.Framework.Service\DataFeed.Framework.Service.csproj" />
     <ProjectReference Include="..\DataFeed.Geography.Model\DataFeed.Framework.Model.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="DataFeed.Geography.WebApi.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
 
   <ItemGroup>
