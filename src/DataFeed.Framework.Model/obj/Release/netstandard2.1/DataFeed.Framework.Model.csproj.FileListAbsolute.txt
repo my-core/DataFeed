@@ -1,9 +1,0 @@
-F:\学习Demo\DataFeed\src\DataFeed.Framework.Model\bin\Release\netstandard2.1\DataFeed.Framework.Model.xml
-F:\学习Demo\DataFeed\src\DataFeed.Framework.Model\bin\Release\netstandard2.1\DataFeed.Framework.Model.deps.json
-F:\学习Demo\DataFeed\src\DataFeed.Framework.Model\bin\Release\netstandard2.1\DataFeed.Framework.Model.dll
-F:\学习Demo\DataFeed\src\DataFeed.Framework.Model\bin\Release\netstandard2.1\DataFeed.Framework.Model.pdb
-F:\学习Demo\DataFeed\src\DataFeed.Framework.Model\obj\Release\netstandard2.1\DataFeed.Framework.Model.csprojAssemblyReference.cache
-F:\学习Demo\DataFeed\src\DataFeed.Framework.Model\obj\Release\netstandard2.1\DataFeed.Framework.Model.AssemblyInfoInputs.cache
-F:\学习Demo\DataFeed\src\DataFeed.Framework.Model\obj\Release\netstandard2.1\DataFeed.Framework.Model.AssemblyInfo.cs
-F:\学习Demo\DataFeed\src\DataFeed.Framework.Model\obj\Release\netstandard2.1\DataFeed.Framework.Model.dll
-F:\学习Demo\DataFeed\src\DataFeed.Framework.Model\obj\Release\netstandard2.1\DataFeed.Framework.Model.pdb

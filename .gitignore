@@ -17,3 +17,8 @@
 /src/DataFeed.Framework.Repository/obj
 /src/DataFeed.Framework.Service/obj
 /src/DataFeed.Framework.Enums/obj
+/src/DataFeed.ManageWeb/obj
+/src/DataFeed.ManageWeb/bin
+/src/DataFeed.Framework.Model/obj
+/src/DataFeed.Framework.Model/bin
+/src/DataFeed.Framework.Utils/obj
