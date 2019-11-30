@@ -18,14 +18,5 @@ namespace DataFeed.Finance.FeedMonitor.Repository
         /// <param name="connString"></param>
         public FinanceRepository(string connString) : base(connString) { }
 
-        /// <summary>
-        /// 获取股票信息
-        /// </summary>
-        /// <param name="request"></param>
-        /// <returns></returns>
-        public void InsertStockCompany()
-        {
-            
-        }
     }
 }

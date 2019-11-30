@@ -22,10 +22,10 @@ namespace DataFeed.ManageWeb.Contract.Base
         /// <summary>
         /// 管理员名不存在
         /// </summary>
-        public static int User_NotExist_UserName = 10001;
+        public static int Admin_NotExist_UserName = 10001;
         /// <summary>
         /// 登录密码错误
         /// </summary>
-        public static int User_Error_Password = 10002;
+        public static int Admin_Error_Password = 10002;
     }
 }

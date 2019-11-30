@@ -32,19 +32,22 @@ namespace DataFeed.ManageWeb
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //db connstring
             string baseDBConnString = Configuration.GetConnectionString("BaseDB");
+            string datafeedDBConnString = Configuration.GetConnectionString("DatafeedDB");
+            //repositoty
             services.AddSingleton<ISystemRepository>(new SystemRepository(baseDBConnString));
+            services.AddSingleton<IFinanceRepository>(new FinanceRepository(datafeedDBConnString));
+            //service
             services.AddSingleton<ISystemService, SystemService>();
+            services.AddSingleton<IFinanceService, FinanceService>();
             //添加认证Cookie信息
             services.AddAuthentication(options =>
             {
-                //DefaultSignInScheme, DefaultSignOutScheme, DefaultChallengeScheme, DefaultForbidScheme 等都会使用该 Scheme 作为默认值。
                 options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
             })
-            //用来注册 CookieAuthenticationHandler，由它来完成身份认证的主要逻辑。
             .AddCookie(options =>
             {
-                // 在这里可以根据需要添加一些Cookie认证相关的配置，在本次示例中使用默认值就可以了。
                 options.LoginPath = "/Login";
             });
             // mvc action上下文，在taghelper(LayuiPagerTagHelper.cs)扩展里用到

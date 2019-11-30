@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataFeed.Geography.FeedMoni
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataFeed.Geography.WebApi", "DataFeed.Geography.WebApi\DataFeed.Geography.WebApi.csproj", "{3D070B84-A9C5-41EA-8DEB-AA787D218C7B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataFeed.Framework.Model", "DataFeed.Geography.Model\DataFeed.Framework.Model.csproj", "{4D5DC594-3E2F-4D9C-A05B-8BE902EE5186}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataFeed.Finance.WebApi", "DataFeed.Finance.WebApi\DataFeed.Finance.WebApi.csproj", "{1AEE10FA-4250-4C1E-ADD3-743E330690EA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{2E445707-B77C-42BB-89F1-6EB9DE437A24}"
@@ -25,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataFeed.ManageWeb", "DataF
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataFeed.Framework.Utils", "DataFeed.Framework.Utils\DataFeed.Framework.Utils.csproj", "{7073C0ED-381B-428C-B610-7708CDB8030E}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataFeed.Framework.Model", "DataFeed.Framework.Model\DataFeed.Framework.Model.csproj", "{E55F0087-F308-4A21-822C-36D9374D035A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,10 +39,6 @@ Global
 		{3D070B84-A9C5-41EA-8DEB-AA787D218C7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D070B84-A9C5-41EA-8DEB-AA787D218C7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D070B84-A9C5-41EA-8DEB-AA787D218C7B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4D5DC594-3E2F-4D9C-A05B-8BE902EE5186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4D5DC594-3E2F-4D9C-A05B-8BE902EE5186}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4D5DC594-3E2F-4D9C-A05B-8BE902EE5186}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4D5DC594-3E2F-4D9C-A05B-8BE902EE5186}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1AEE10FA-4250-4C1E-ADD3-743E330690EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1AEE10FA-4250-4C1E-ADD3-743E330690EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AEE10FA-4250-4C1E-ADD3-743E330690EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -71,16 +67,20 @@ Global
 		{7073C0ED-381B-428C-B610-7708CDB8030E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7073C0ED-381B-428C-B610-7708CDB8030E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7073C0ED-381B-428C-B610-7708CDB8030E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E55F0087-F308-4A21-822C-36D9374D035A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E55F0087-F308-4A21-822C-36D9374D035A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E55F0087-F308-4A21-822C-36D9374D035A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E55F0087-F308-4A21-822C-36D9374D035A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{4D5DC594-3E2F-4D9C-A05B-8BE902EE5186} = {2E445707-B77C-42BB-89F1-6EB9DE437A24}
 		{1C47681D-6D09-4F07-9AC8-F2E1080E3561} = {2E445707-B77C-42BB-89F1-6EB9DE437A24}
 		{300AA0AB-CBC4-4E5F-BA60-87351B5A5175} = {2E445707-B77C-42BB-89F1-6EB9DE437A24}
 		{922668F2-C835-49F0-BFC0-1EEE7AD16286} = {2E445707-B77C-42BB-89F1-6EB9DE437A24}
 		{7073C0ED-381B-428C-B610-7708CDB8030E} = {2E445707-B77C-42BB-89F1-6EB9DE437A24}
+		{E55F0087-F308-4A21-822C-36D9374D035A} = {2E445707-B77C-42BB-89F1-6EB9DE437A24}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {269A0436-CD9C-410B-899E-4F952E65B2C5}

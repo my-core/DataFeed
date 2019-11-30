@@ -24,7 +24,7 @@ namespace DataFeed.Finance.WebApi.Repository
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
-        public List<StockCodeInfo> GetStockCodeList(GetStockCodeRequest request)
+        public List<StockInfo> GetStockCodeList(GetStockCodeRequest request)
         {
             var sbSql = new StringBuilder(@" select * from finance_stockcode where 1=1");
             var param = new DynamicParameters();
@@ -40,7 +40,7 @@ namespace DataFeed.Finance.WebApi.Repository
             }
             using (var conn = OpenConnection())
             {
-                return conn.Query<StockCodeInfo>(sbSql.ToString(), param).AsList();
+                return conn.Query<StockInfo>(sbSql.ToString(), param).AsList();
             }
         }
     }

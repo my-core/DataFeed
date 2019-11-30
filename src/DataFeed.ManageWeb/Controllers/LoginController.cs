@@ -37,7 +37,7 @@ namespace FDataFeed.ManageWeb.Controllers
         [HttpPost("Index")]
         public AjaxResult Index(AdminLoginRequest request)
         {
-            AdminLoginResponse loginResponse = _systemService.UserLogin(request);
+            AdminLoginResponse loginResponse = _systemService.AdminLogin(request);
             if (loginResponse.Result == RT.Success)
             {
                 Result.IsOk = true;
@@ -45,18 +45,18 @@ namespace FDataFeed.ManageWeb.Controllers
 
                 var claimIdentity = new ClaimsIdentity("Cookie");
                 claimIdentity.AddClaim(new Claim(ClaimTypes.Authentication, JsonConvert.SerializeObject(loginResponse.AuthList)));
-                claimIdentity.AddClaim(new Claim(ClaimTypes.UserData, JsonConvert.SerializeObject(loginResponse.LoginAdminInfo)));
+                claimIdentity.AddClaim(new Claim(ClaimTypes.UserData, JsonConvert.SerializeObject(loginResponse.AdminInfo)));
 
                 var claimsPrincipal = new ClaimsPrincipal(claimIdentity);
                 // 在上面注册AddAuthentication时，指定了默认的Scheme，在这里便可以不再指定Scheme。
                 HttpContext.SignInAsync(claimsPrincipal);
             }
-            else if (loginResponse.Result == RT.User_NotExist_UserName)
+            else if (loginResponse.Result == RT.Admin_NotExist_UserName)
             {
                 Result.IsOk = false;
                 Result.Msg = "管理员名不存在！";
             }
-            else if (loginResponse.Result == RT.User_Error_Password)
+            else if (loginResponse.Result == RT.Admin_Error_Password)
             {
                 Result.IsOk = false;
                 Result.Msg = "密码不正确！";

@@ -76,3 +76,11 @@ F:\学习Demo\DataFeed\src\DataFeed.ManageWeb\obj\Release\netcoreapp3.0\DataFeed
 F:\学习Demo\DataFeed\src\DataFeed.ManageWeb\obj\Release\netcoreapp3.0\DataFeed.ManageWeb.csproj.CopyComplete
 F:\学习Demo\DataFeed\src\DataFeed.ManageWeb\obj\Release\netcoreapp3.0\DataFeed.ManageWeb.dll
 F:\学习Demo\DataFeed\src\DataFeed.ManageWeb\obj\Release\netcoreapp3.0\DataFeed.ManageWeb.pdb
+F:\学习Demo\DataFeed\src\DataFeed.ManageWeb\bin\Release\netcoreapp3.0\nlog.config
+F:\学习Demo\DataFeed\src\DataFeed.ManageWeb\bin\Release\netcoreapp3.0\NLog.dll
+F:\学习Demo\DataFeed\src\DataFeed.ManageWeb\bin\Release\netcoreapp3.0\NLog.Extensions.Logging.dll
+F:\学习Demo\DataFeed\src\DataFeed.ManageWeb\bin\Release\netcoreapp3.0\NLog.Web.AspNetCore.dll
+F:\学习Demo\DataFeed\src\DataFeed.ManageWeb\bin\Release\netcoreapp3.0\DataFeed.Framework.Enums.dll
+F:\学习Demo\DataFeed\src\DataFeed.ManageWeb\bin\Release\netcoreapp3.0\DataFeed.Framework.Enums.pdb
+F:\学习Demo\DataFeed\src\DataFeed.ManageWeb\obj\Release\netcoreapp3.0\Razor\Views\Finance\StockAdd.cshtml.g.cs
+F:\学习Demo\DataFeed\src\DataFeed.ManageWeb\obj\Release\netcoreapp3.0\Razor\Views\Finance\StockList.cshtml.g.cs
