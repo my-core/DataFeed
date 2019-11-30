@@ -98,11 +98,7 @@ namespace DataFeed.Geography.FeedMonitor.Service
         /// </summary>
         private void HandleProvinceData()
         {
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
             var result = _geographyMongoRepository.GetProvinceList();
-            stopwatch.Stop();
-            //_logger.LogWarning("GetProvinceList->{0}ms",stopwatch.ElapsedMilliseconds);
             List<ProvinceInfo> list = new List<ProvinceInfo>();
             result.ForEach(item =>
             {
@@ -126,12 +122,7 @@ namespace DataFeed.Geography.FeedMonitor.Service
         /// </summary>
         private void HandleCityData(string provinceCode)
         {
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
             List<CityVo> result = _geographyMongoRepository.GetCityList(provinceCode);
-            stopwatch.Stop();
-            //_logger.LogWarning("GetCityList->{0}ms", stopwatch.ElapsedMilliseconds);
-            
             List<CityInfo> list = new List<CityInfo>();
             result.ForEach(item =>
             {
@@ -155,12 +146,7 @@ namespace DataFeed.Geography.FeedMonitor.Service
         /// </summary>
         private void HandleCountyData(string cityCode)
         {
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
             List<CountyVo> result = _geographyMongoRepository.GetCountyList(cityCode);
-            stopwatch.Stop();
-            //_logger.LogWarning("GetCountyList->{0}ms", stopwatch.ElapsedMilliseconds);
-            
             List<CountyInfo> list = new List<CountyInfo>();
             result.ForEach(item =>
             {
@@ -177,7 +163,6 @@ namespace DataFeed.Geography.FeedMonitor.Service
             });
             if (list.Count > 0)
                 countyQueue.Push(list);
-                //_geographyRepository.Insert(list);
         }
 
         /// <summary>
@@ -185,12 +170,7 @@ namespace DataFeed.Geography.FeedMonitor.Service
         /// </summary>
         private void HandleTownData(string countyCode)
         {
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
             List<TownVo> result = _geographyMongoRepository.GetTownList(countyCode);
-            stopwatch.Stop();
-            //_logger.LogWarning("GetTownList->{0}ms", stopwatch.ElapsedMilliseconds);
-            
             List<TownInfo> list = new List<TownInfo>();
             result.ForEach(item =>
             {
@@ -207,7 +187,6 @@ namespace DataFeed.Geography.FeedMonitor.Service
             });
             if (list.Count > 0)
                 townQueue.Push(list);
-                //_geographyRepository.Insert(list);
         }
 
         /// <summary>
@@ -215,12 +194,7 @@ namespace DataFeed.Geography.FeedMonitor.Service
         /// </summary>
         private void HandleVillageData(string townCode)
         {
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
             List<VillageVo> result = _geographyMongoRepository.GetVillageList(townCode);
-            stopwatch.Stop();
-            //_logger.LogWarning("GetVillageList->{0}ms", stopwatch.ElapsedMilliseconds);
-            
             List<VillageInfo> list = new List<VillageInfo>();
             result.ForEach(item =>
             {

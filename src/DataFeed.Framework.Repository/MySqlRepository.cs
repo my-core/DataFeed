@@ -25,7 +25,7 @@ namespace DataFeed.Framework.Repository
         {
             var conn = new MySqlConnection(_connString);
             conn.Open();
-            return conn;            
+            return conn;
         }
     }
 }
