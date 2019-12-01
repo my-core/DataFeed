@@ -44,7 +44,7 @@ namespace DataFeed.Geography.FeedMonitor.Service
             _geographyRepository = geographyRepository;
 
             countyThreads = new Thread[15];
-            for (int i = 0; i < 15; i++)
+            for (int i = 0; i < 10; i++)
             {
                 Thread crawlThread = new Thread(DoWork_County);
                 crawlThread.Name = i.ToString();
@@ -228,14 +228,14 @@ namespace DataFeed.Geography.FeedMonitor.Service
                     {
                         if (villageQueue.Count == 0)
                         {
-                            //Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Thread.Sleep(TimeSpan.FromSeconds(1));
                             continue;
                         }
                         list = villageQueue.Pop();
                     }
                     if (list == null)
                     {
-                        //Thread.Sleep(TimeSpan.FromSeconds(1));
+                        Thread.Sleep(TimeSpan.FromSeconds(1));
                         continue;
                     }
                     Stopwatch stopwatch = new Stopwatch();
@@ -266,14 +266,14 @@ namespace DataFeed.Geography.FeedMonitor.Service
                     {
                         if (townQueue.Count == 0)
                         {
-                            //Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Thread.Sleep(TimeSpan.FromSeconds(1));
                             continue;
                         }
                         list = townQueue.Pop();
                     }
                     if (list == null)
                     {
-                        //Thread.Sleep(TimeSpan.FromSeconds(1));
+                        Thread.Sleep(TimeSpan.FromSeconds(1));
                         continue;
                     }
 
@@ -307,14 +307,14 @@ namespace DataFeed.Geography.FeedMonitor.Service
                     {
                         if (countyQueue.Count == 0)
                         {
-                            //Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Thread.Sleep(TimeSpan.FromSeconds(1));
                             continue;
                         }
                         list = countyQueue.Pop();
                     }
                     if (list == null)
                     {
-                        //Thread.Sleep(TimeSpan.FromSeconds(1));
+                        Thread.Sleep(TimeSpan.FromSeconds(1));
                         continue;
                     }
                     Stopwatch stopwatch = new Stopwatch();

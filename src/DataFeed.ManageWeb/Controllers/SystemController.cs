@@ -57,7 +57,7 @@ namespace FDataFeed.ManageWeb.Controllers
         public ActionResult AdminAdd(AdminInfo info, IFormCollection form)
         {
             info.IsSuper = form["IsSuper"].ToString().ToLower() == "on" ? true : false;
-            if (info.ID > 0)
+            if (info.ID == 0)
             {
                 info.Password = RSADEncrypt.Encrypt(info.Password);
                 info.CreateBy = LoginAdminInfo.ID;
@@ -186,7 +186,7 @@ namespace FDataFeed.ManageWeb.Controllers
         [HttpPost]
         public ActionResult RoleAdd(RoleInfo info, IFormCollection form)
         {
-            if (info.ID > 0)
+            if (info.ID == 0)
             {
                 info.CreateBy = LoginAdminInfo.ID;
                 info.CreateTime = DateTime.Now;
@@ -305,7 +305,7 @@ namespace FDataFeed.ManageWeb.Controllers
         [HttpPost]
         public ActionResult AuthAdd(AuthInfo info)
         {
-            if (info.ID > 0)
+            if (info.ID == 0)
             {
                 AuthInfo hasInfo = _systemService.GetModel<AuthInfo>(new { info.AuthCode });
                 if (hasInfo != null && hasInfo.ID > 0)
