@@ -23,3 +23,5 @@
 /src/DataFeed.Framework.Utils/bin
 /src/DataFeed.Framework.Model/obj
 /src/DataFeed.Framework.Model/bin
+/src/DataFeed.ImageDownloader/obj
+/src/DataFeed.ImageDownloader/bin
