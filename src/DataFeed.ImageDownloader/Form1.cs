@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,7 +19,24 @@ namespace DataFeed.ImageDownloader
         public Form1()
         {
             InitializeComponent();
+            for(int i = 31; i <= 301; i++)
+            {
+                using(HttpClient httpClient =new HttpClient())
+                {
+                    string url = $"http://testnewsfeed.huanyingzq.com/api/syncnews/history?columnid={i}";
 
+                    try
+                    {
+                        var res = httpClient.GetStringAsync(url).Result;
+                        Console.WriteLine($"url[{url}],result[{res}]");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"url[{url}],result[{ex.Message}]");
+                    }
+                }
+              
+            }
             
         }
 
