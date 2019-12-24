@@ -19,11 +19,11 @@ namespace DataFeed.ImageDownloader
         public Form1()
         {
             InitializeComponent();
-            for(int i = 31; i <= 301; i++)
+            for(int i = 7; i <= 301; i++)
             {
                 using(HttpClient httpClient =new HttpClient())
                 {
-                    string url = $"http://testnewsfeed.huanyingzq.com/api/syncnews/history?columnid={i}";
+                    string url = $"http://newsfeed.huanyingzq.com/api/syncnews/history?columnid={i}";
 
                     try
                     {

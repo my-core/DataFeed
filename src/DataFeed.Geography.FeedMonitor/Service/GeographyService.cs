@@ -44,7 +44,7 @@ namespace DataFeed.Geography.FeedMonitor.Service
             _geographyRepository = geographyRepository;
 
             countyThreads = new Thread[15];
-            for (int i = 0; i < 15; i++)
+            for (int i = 0; i < 10; i++)
             {
                 Thread crawlThread = new Thread(DoWork_County);
                 crawlThread.Name = i.ToString();
@@ -98,11 +98,7 @@ namespace DataFeed.Geography.FeedMonitor.Service
         /// </summary>
         private void HandleProvinceData()
         {
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
             var result = _geographyMongoRepository.GetProvinceList();
-            stopwatch.Stop();
-            //_logger.LogWarning("GetProvinceList->{0}ms",stopwatch.ElapsedMilliseconds);
             List<ProvinceInfo> list = new List<ProvinceInfo>();
             result.ForEach(item =>
             {
@@ -126,12 +122,7 @@ namespace DataFeed.Geography.FeedMonitor.Service
         /// </summary>
         private void HandleCityData(string provinceCode)
         {
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
             List<CityVo> result = _geographyMongoRepository.GetCityList(provinceCode);
-            stopwatch.Stop();
-            //_logger.LogWarning("GetCityList->{0}ms", stopwatch.ElapsedMilliseconds);
-            
             List<CityInfo> list = new List<CityInfo>();
             result.ForEach(item =>
             {
@@ -155,12 +146,7 @@ namespace DataFeed.Geography.FeedMonitor.Service
         /// </summary>
         private void HandleCountyData(string cityCode)
         {
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
             List<CountyVo> result = _geographyMongoRepository.GetCountyList(cityCode);
-            stopwatch.Stop();
-            //_logger.LogWarning("GetCountyList->{0}ms", stopwatch.ElapsedMilliseconds);
-            
             List<CountyInfo> list = new List<CountyInfo>();
             result.ForEach(item =>
             {
@@ -177,7 +163,6 @@ namespace DataFeed.Geography.FeedMonitor.Service
             });
             if (list.Count > 0)
                 countyQueue.Push(list);
-                //_geographyRepository.Insert(list);
         }
 
         /// <summary>
@@ -185,12 +170,7 @@ namespace DataFeed.Geography.FeedMonitor.Service
         /// </summary>
         private void HandleTownData(string countyCode)
         {
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
             List<TownVo> result = _geographyMongoRepository.GetTownList(countyCode);
-            stopwatch.Stop();
-            //_logger.LogWarning("GetTownList->{0}ms", stopwatch.ElapsedMilliseconds);
-            
             List<TownInfo> list = new List<TownInfo>();
             result.ForEach(item =>
             {
@@ -207,7 +187,6 @@ namespace DataFeed.Geography.FeedMonitor.Service
             });
             if (list.Count > 0)
                 townQueue.Push(list);
-                //_geographyRepository.Insert(list);
         }
 
         /// <summary>
@@ -215,12 +194,7 @@ namespace DataFeed.Geography.FeedMonitor.Service
         /// </summary>
         private void HandleVillageData(string townCode)
         {
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
             List<VillageVo> result = _geographyMongoRepository.GetVillageList(townCode);
-            stopwatch.Stop();
-            //_logger.LogWarning("GetVillageList->{0}ms", stopwatch.ElapsedMilliseconds);
-            
             List<VillageInfo> list = new List<VillageInfo>();
             result.ForEach(item =>
             {
@@ -254,14 +228,14 @@ namespace DataFeed.Geography.FeedMonitor.Service
                     {
                         if (villageQueue.Count == 0)
                         {
-                            //Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Thread.Sleep(TimeSpan.FromSeconds(1));
                             continue;
                         }
                         list = villageQueue.Pop();
                     }
                     if (list == null)
                     {
-                        //Thread.Sleep(TimeSpan.FromSeconds(1));
+                        Thread.Sleep(TimeSpan.FromSeconds(1));
                         continue;
                     }
                     Stopwatch stopwatch = new Stopwatch();
@@ -292,14 +266,14 @@ namespace DataFeed.Geography.FeedMonitor.Service
                     {
                         if (townQueue.Count == 0)
                         {
-                            //Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Thread.Sleep(TimeSpan.FromSeconds(1));
                             continue;
                         }
                         list = townQueue.Pop();
                     }
                     if (list == null)
                     {
-                        //Thread.Sleep(TimeSpan.FromSeconds(1));
+                        Thread.Sleep(TimeSpan.FromSeconds(1));
                         continue;
                     }
 
@@ -333,14 +307,14 @@ namespace DataFeed.Geography.FeedMonitor.Service
                     {
                         if (countyQueue.Count == 0)
                         {
-                            //Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Thread.Sleep(TimeSpan.FromSeconds(1));
                             continue;
                         }
                         list = countyQueue.Pop();
                     }
                     if (list == null)
                     {
-                        //Thread.Sleep(TimeSpan.FromSeconds(1));
+                        Thread.Sleep(TimeSpan.FromSeconds(1));
                         continue;
                     }
                     Stopwatch stopwatch = new Stopwatch();
